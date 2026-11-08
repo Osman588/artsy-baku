@@ -1,105 +1,120 @@
 /* ============================================================
-   ARTSY BAKU — KOMPONENTLƏR VƏ XÜSUSİ MODULLAR
+   ARTSY BAKU — SPATIAL UI COMPONENTS & FROSTED GLASS MODULES
+   visionOS / Spatial Computing inspired depth, materials & illumination
    ============================================================ */
 
-/* 1. NAVİQASİYA VƏ HEADER */
+/* 1. FLOATING SPATIAL GLASS HEADER */
 .site-header {
   position: sticky;
-  top: 0;
+  top: 16px;
   z-index: 1000;
-  background-color: rgba(250, 248, 245, 0.92);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid var(--border-color);
+  margin: 0 auto;
+  max-width: var(--container-max);
+  padding: 0 24px;
+  background: transparent;
   transition: all var(--transition-normal);
-  height: var(--header-height);
-  display: flex;
-  align-items: center;
-}
-
-.site-header.scrolled {
-  background-color: rgba(255, 255, 255, 0.96);
-  box-shadow: var(--shadow-sm);
-  height: 70px;
 }
 
 .header-inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: var(--header-height);
+  padding: 0 28px;
+  background: rgba(18, 22, 38, 0.72);
+  backdrop-filter: var(--blur-glass) saturate(190%);
+  -webkit-backdrop-filter: var(--blur-glass) saturate(190%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-glass-lg);
+  transition: all var(--transition-normal);
 }
 
-/* Loqo və Brendinq */
+.site-header.scrolled .header-inner {
+  background: rgba(14, 18, 32, 0.88);
+  border-color: var(--glass-border-bright);
+  height: 72px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+}
+
+/* Brand Logo with 3D Transparent Image */
 .brand-logo {
   display: inline-flex;
   align-items: center;
   gap: 12px;
   text-decoration: none;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+  transition: transform var(--transition-fast);
+}
+
+.brand-logo:hover {
+  transform: scale(1.03);
 }
 
 .brand-logo-img {
-  height: 42px;
+  height: 48px;
   width: auto;
   object-fit: contain;
+  filter: drop-shadow(0 4px 12px rgba(255, 46, 147, 0.3));
 }
 
 .brand-logo-fallback {
   display: flex;
   align-items: baseline;
-  gap: 5px;
+  gap: 6px;
 }
 
 .brand-logo-fallback .logo-serif {
   font-family: var(--font-serif);
-  font-size: 1.75rem;
+  font-size: 1.7rem;
   font-weight: 700;
-  color: var(--text-primary);
   letter-spacing: -0.02em;
+  background: linear-gradient(135deg, #FFFFFF 0%, #E2E8F0 50%, #FFB703 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .brand-logo-fallback .logo-accent {
   font-family: var(--font-sans);
-  font-size: 0.95rem;
-  font-weight: 700;
-  letter-spacing: 0.16em;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--accent-cyan);
+  text-shadow: 0 0 12px var(--accent-cyan-glow);
 }
 
-/* Əsas Menyu */
+/* Spatial Pill Navigation */
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  padding: 5px 8px;
+  border-radius: var(--radius-pill);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav-link {
-  font-size: 0.95rem;
-  font-weight: 500;
+  font-size: 0.9rem;
+  font-weight: 600;
   color: var(--text-secondary);
   position: relative;
-  padding: 8px 0;
+  padding: 8px 18px;
+  border-radius: var(--radius-pill);
+  transition: all var(--transition-fast);
 }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0;
-  height: 2px;
-  background-color: var(--gold);
-  transition: width var(--transition-normal);
+.nav-link:hover {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.08);
 }
 
-.nav-link:hover,
 .nav-link.active {
-  color: var(--text-primary);
-}
-
-.nav-link.active::after,
-.nav-link:hover::after {
-  width: 100%;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
 .header-actions {
@@ -108,7 +123,7 @@
   gap: 16px;
 }
 
-/* Mobil Menyu Düyməsi */
+/* Mobile Toggle */
 .mobile-nav-toggle {
   display: none;
   flex-direction: column;
@@ -116,18 +131,19 @@
   align-items: center;
   width: 44px;
   height: 44px;
-  border-radius: var(--radius-sm);
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-color);
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--glass-border);
   gap: 5px;
   z-index: 1100;
+  backdrop-filter: var(--blur-subtle);
 }
 
 .mobile-nav-toggle span {
   display: block;
-  width: 22px;
+  width: 20px;
   height: 2px;
-  background-color: var(--text-primary);
+  background-color: #FFFFFF;
   transition: all var(--transition-normal);
 }
 
@@ -143,7 +159,7 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
-/* Mobil Menyu Pərdəsi */
+/* Mobile Drawer */
 .mobile-menu-overlay {
   display: none;
   position: fixed;
@@ -151,8 +167,8 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(26, 24, 22, 0.6);
-  backdrop-filter: blur(4px);
+  background: rgba(5, 7, 12, 0.75);
+  backdrop-filter: blur(12px);
   z-index: 1050;
   opacity: 0;
   pointer-events: none;
@@ -171,13 +187,15 @@
   width: 85%;
   max-width: 360px;
   height: 100vh;
-  background-color: var(--bg-surface);
+  background: rgba(16, 20, 36, 0.94);
+  backdrop-filter: var(--blur-glass);
+  border-left: 1px solid var(--glass-border);
   z-index: 1060;
   padding: 90px 28px 36px 28px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  box-shadow: -10px 0 30px rgba(0,0,0,0.15);
+  box-shadow: -15px 0 45px rgba(0, 0, 0, 0.6);
   transition: right var(--transition-normal);
   overflow-y: auto;
 }
@@ -189,43 +207,46 @@
 .mobile-nav-links {
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 12px;
 }
 
 .mobile-nav-links .nav-link {
   font-size: 1.15rem;
   font-weight: 600;
-  padding: 12px 0;
-  border-bottom: 1px solid var(--border-light);
+  padding: 14px 18px;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
 }
 
-/* 2. HERO BÖLMƏSİ */
+.mobile-nav-links .nav-link.active {
+  border-color: var(--glass-border);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* 2. SPATIAL HERO SECTION */
 .hero-section {
   position: relative;
-  padding: 60px 0 90px 0;
+  padding: 70px 0 100px 0;
   overflow: hidden;
-  background: radial-gradient(circle at 85% 15%, rgba(223, 190, 126, 0.18) 0%, transparent 60%),
-              radial-gradient(circle at 10% 80%, rgba(217, 106, 131, 0.12) 0%, transparent 50%),
-              var(--bg-primary);
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1.15fr 0.85fr;
   align-items: center;
   gap: 56px;
 }
 
 .hero-content {
-  max-width: 580px;
+  max-width: 600px;
 }
 
 .hero-content .heading-xl {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .hero-content .text-lead {
-  margin-bottom: 32px;
+  margin-bottom: 34px;
 }
 
 .hero-buttons {
@@ -233,14 +254,14 @@
   align-items: center;
   flex-wrap: wrap;
   gap: 16px;
-  margin-bottom: 36px;
+  margin-bottom: 38px;
 }
 
 .hero-features-list {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  border-top: 1px solid var(--border-color);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 24px;
 }
 
@@ -254,11 +275,12 @@
 }
 
 .hero-feature-item svg {
-  color: var(--gold);
+  color: var(--accent-cyan);
+  filter: drop-shadow(0 0 6px var(--accent-cyan-glow));
   flex-shrink: 0;
 }
 
-/* Hero Görünüş Kompozisiyası */
+/* Hero Visual Card */
 .hero-visual {
   position: relative;
 }
@@ -267,65 +289,68 @@
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid rgba(255, 255, 255, 0.8);
-  background-color: #FFFFFF;
+  box-shadow: var(--shadow-glass-lg);
+  border: 1px solid var(--glass-border-bright);
+  background: rgba(22, 28, 48, 0.5);
+  backdrop-filter: var(--blur-glass);
 }
 
 .hero-image-card img {
   width: 100%;
-  height: 480px;
+  height: 490px;
   object-fit: cover;
   transition: transform var(--transition-slow);
 }
 
 .hero-image-card:hover img {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
+/* Glowing floating badge */
 .hero-floating-badge {
   position: absolute;
   bottom: 24px;
   left: -20px;
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(10px);
-  padding: 16px 22px;
+  background: rgba(18, 24, 44, 0.85);
+  backdrop-filter: var(--blur-glass) saturate(180%);
+  padding: 16px 24px;
   border-radius: var(--radius-md);
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--border-light);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+  border: 1px solid var(--glass-border-bright);
   display: flex;
   align-items: center;
   gap: 14px;
 }
 
 .badge-icon-box {
-  width: 44px;
-  height: 44px;
+  width: 46px;
+  height: 46px;
   border-radius: var(--radius-pill);
-  background-color: var(--gold-subtle);
-  color: var(--gold-hover);
+  background: linear-gradient(135deg, rgba(255, 46, 147, 0.2), rgba(255, 183, 3, 0.2));
+  border: 1px solid rgba(255, 255, 255, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.25rem;
+  font-size: 1.35rem;
 }
 
 .badge-title {
-  font-size: 0.8rem;
+  font-size: 0.78rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   color: var(--text-muted);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .badge-value {
   font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-size: 1.35rem;
   font-weight: 700;
-  color: var(--text-primary);
+  color: #FFFFFF;
+  text-shadow: 0 0 10px rgba(255, 183, 3, 0.3);
 }
 
-/* 3. ÜSTÜNLÜKLƏR BÖLMƏSİ */
+/* 3. SPATIAL FEATURE TILES */
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -333,43 +358,60 @@
 }
 
 .feature-box {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-md);
-  padding: 32px 24px;
+  background: var(--glass-base);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-lg);
+  padding: 34px 24px;
   text-align: center;
+  backdrop-filter: var(--blur-glass);
+  box-shadow: var(--shadow-glass);
   transition: all var(--transition-normal);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-box::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
 }
 
 .feature-box:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-md);
-  border-color: var(--gold-light);
+  transform: translateY(-6px);
+  background: var(--glass-elevated);
+  border-color: var(--glass-border-bright);
+  box-shadow: var(--shadow-glass-lg), 0 0 25px rgba(0, 229, 255, 0.15);
 }
 
 .feature-icon-wrapper {
-  width: 60px;
-  height: 60px;
-  margin: 0 auto 18px auto;
+  width: 62px;
+  height: 62px;
+  margin: 0 auto 20px auto;
   border-radius: var(--radius-pill);
-  background-color: var(--gold-subtle);
-  color: var(--gold-hover);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.2);
 }
 
 .feature-box .heading-sm {
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .feature-box p {
   font-size: 0.9rem;
   color: var(--text-secondary);
+  line-height: 1.6;
 }
 
-/* 4. MƏHSULLAR GRID VƏ KARTLARI */
+/* 4. SPATIAL PRODUCT TILES */
 .products-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -377,27 +419,41 @@
 }
 
 .product-card {
-  background-color: var(--bg-surface);
+  background: var(--glass-base);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border-color);
+  border: 1px solid var(--glass-border);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-glass);
+  backdrop-filter: var(--blur-glass);
   transition: all var(--transition-normal);
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+
+.product-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+  z-index: 3;
 }
 
 .product-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-lg);
-  border-color: var(--gold-light);
+  transform: translateY(-8px) scale(1.01);
+  background: var(--glass-elevated);
+  border-color: var(--glass-border-bright);
+  box-shadow: var(--shadow-glass-lg), 0 0 35px rgba(255, 46, 147, 0.18);
 }
 
 .product-image-container {
   position: relative;
   width: 100%;
   padding-top: 100%; /* 1:1 Aspect Ratio */
-  background-color: #F8F6F2;
+  background: rgba(10, 14, 26, 0.8);
   overflow: hidden;
 }
 
@@ -412,7 +468,7 @@
 }
 
 .product-card:hover .product-image-container img {
-  transform: scale(1.05);
+  transform: scale(1.06);
 }
 
 .product-badge-overlay {
@@ -430,7 +486,7 @@
 }
 
 .product-content {
-  padding: 24px;
+  padding: 26px;
   display: flex;
   flex-direction: column;
   flex-grow: 1;
@@ -440,46 +496,47 @@
   display: flex;
   align-items: baseline;
   justify-content: space-between;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .product-title {
   font-family: var(--font-serif);
   font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--text-primary);
+  font-weight: 700;
+  color: #FFFFFF;
 }
 
 .product-price {
   font-family: var(--font-sans);
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--gold-hover);
+  font-size: 1.35rem;
+  font-weight: 800;
+  color: var(--accent-gold);
+  text-shadow: 0 0 14px var(--accent-gold-glow);
   white-space: nowrap;
 }
 
 .product-description {
   font-size: 0.9rem;
   color: var(--text-secondary);
-  line-height: 1.55;
-  margin-bottom: 20px;
+  line-height: 1.6;
+  margin-bottom: 22px;
   flex-grow: 1;
 }
 
-/* Gül rəngləri mini seçimi kart daxilində */
+/* Card Flower Dots */
 .product-card-colors {
-  margin-bottom: 20px;
-  padding-top: 14px;
-  border-top: 1px solid var(--border-light);
+  margin-bottom: 22px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .product-card-colors-label {
-  font-size: 0.8rem;
-  font-weight: 600;
+  font-size: 0.78rem;
+  font-weight: 700;
   color: var(--text-muted);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
-  margin-bottom: 8px;
+  letter-spacing: 0.08em;
+  margin-bottom: 10px;
   display: flex;
   justify-content: space-between;
 }
@@ -487,22 +544,23 @@
 .flower-dots-row {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 10px;
 }
 
 .flower-dot {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   border-radius: var(--radius-pill);
-  border: 2px solid #FFFFFF;
-  box-shadow: 0 0 0 1px var(--border-color);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
   position: relative;
   cursor: pointer;
-  transition: transform var(--transition-fast);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
 }
 
 .flower-dot:hover {
-  transform: scale(1.2);
+  transform: scale(1.3);
+  box-shadow: 0 0 12px currentColor;
 }
 
 .product-card-actions {
@@ -511,39 +569,43 @@
   gap: 10px;
 }
 
-/* 5. GÜL RƏNGLƏRİ VİZUAL BÖLMƏSİ (İSTİNAD) */
+/* 5. FLOWER REFERENCE SPATIAL BOARD */
 .flower-reference-section {
-  background-color: var(--bg-surface);
+  background: var(--glass-base);
   border-radius: var(--radius-lg);
-  border: 1px solid var(--border-color);
-  padding: 36px 30px;
-  margin-bottom: 48px;
+  border: 1px solid var(--glass-border);
+  padding: 38px 32px;
+  margin-bottom: 50px;
+  backdrop-filter: var(--blur-glass);
+  box-shadow: var(--shadow-glass-lg);
 }
 
 .flower-reference-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   gap: 16px;
-  margin-top: 24px;
+  margin-top: 26px;
 }
 
 .flower-reference-card {
-  background: var(--bg-primary);
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-md);
-  padding: 16px 10px;
+  padding: 18px 12px;
   text-align: center;
   position: relative;
   transition: all var(--transition-fast);
+  backdrop-filter: var(--blur-subtle);
 }
 
 .flower-reference-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--gold);
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--glass-border-bright);
 }
 
 .flower-reference-card.unavailable {
-  opacity: 0.45;
+  opacity: 0.35;
   filter: grayscale(0.8);
 }
 
@@ -553,7 +615,8 @@
   left: 8px;
   width: 22px;
   height: 22px;
-  background-color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   color: #FFFFFF;
   border-radius: var(--radius-pill);
   font-size: 0.75rem;
@@ -564,27 +627,32 @@
 }
 
 .flower-reference-swatch {
-  width: 44px;
-  height: 44px;
+  width: 48px;
+  height: 48px;
   border-radius: var(--radius-pill);
-  margin: 8px auto 10px auto;
-  border: 3px solid #FFFFFF;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.12);
+  margin: 10px auto 12px auto;
+  border: 3px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 18px rgba(0,0,0,0.5);
+  transition: transform var(--transition-fast);
+}
+
+.flower-reference-card:hover .flower-reference-swatch {
+  transform: scale(1.1);
 }
 
 .flower-reference-name {
-  font-size: 0.85rem;
-  font-weight: 600;
-  color: var(--text-primary);
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: #FFFFFF;
 }
 
 .flower-reference-status {
-  font-size: 0.7rem;
+  font-size: 0.72rem;
   color: var(--text-muted);
   margin-top: 4px;
 }
 
-/* 6. ÇOXMƏHSULLU SİFARİŞ FORMASI (ORDER.HTML) */
+/* 6. SPATIAL MULTI-PRODUCT ORDER FORM */
 .order-layout {
   display: grid;
   grid-template-columns: 1.25fr 0.85fr;
@@ -593,70 +661,75 @@
 }
 
 .order-form-panel {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-color);
+  background: var(--glass-base);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  padding: 36px;
-  box-shadow: var(--shadow-sm);
+  padding: 38px;
+  box-shadow: var(--shadow-glass-lg);
+  backdrop-filter: var(--blur-glass);
 }
 
 .order-items-wrapper {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 26px;
   margin-bottom: 28px;
 }
 
-/* Tək məhsul sifariş kartı */
 .order-item-card {
-  background: var(--bg-primary);
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.09);
   border-radius: var(--radius-md);
-  padding: 24px;
+  padding: 26px;
   position: relative;
   transition: all var(--transition-normal);
 }
 
 .order-item-card:hover {
-  border-color: var(--gold-light);
+  border-color: var(--glass-border-bright);
+  background: rgba(255, 255, 255, 0.05);
 }
 
 .order-item-header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .order-item-number {
   font-weight: 700;
-  font-size: 0.95rem;
-  color: var(--gold-hover);
+  font-size: 1rem;
+  color: var(--accent-gold);
   display: flex;
   align-items: center;
   gap: 8px;
+  text-shadow: 0 0 10px var(--accent-gold-glow);
 }
 
 .btn-remove-item {
-  color: var(--danger);
+  color: #F87171;
   font-size: 0.85rem;
   font-weight: 600;
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 4px 8px;
-  border-radius: var(--radius-sm);
-  transition: background-color var(--transition-fast);
+  padding: 6px 12px;
+  border-radius: var(--radius-pill);
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  transition: all var(--transition-fast);
 }
 
 .btn-remove-item:hover {
-  background-color: var(--danger-bg);
+  background: rgba(239, 68, 68, 0.22);
+  transform: translateY(-1px);
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 22px;
 }
 
 .form-label {
@@ -668,7 +741,7 @@
 }
 
 .form-label .req {
-  color: var(--danger);
+  color: #F87171;
 }
 
 .form-label .help-text {
@@ -678,29 +751,37 @@
   margin-left: 6px;
 }
 
+/* Spatial Form Controls */
 .form-control {
   width: 100%;
-  padding: 12px 16px;
+  padding: 13px 18px;
   font-size: 0.95rem;
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.14);
   border-radius: var(--radius-sm);
-  color: var(--text-primary);
-  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  color: #FFFFFF;
+  backdrop-filter: var(--blur-subtle);
+  transition: all var(--transition-fast);
 }
 
 .form-control:focus {
   outline: none;
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(197, 160, 89, 0.15);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 }
 
-/* Rəng seçicisi (Swatches) */
+select.form-control option {
+  background-color: #121626;
+  color: #FFFFFF;
+}
+
+/* Spatial Color Picker Swatches */
 .color-picker-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(95px, 1fr));
   gap: 10px;
-  margin-top: 8px;
+  margin-top: 10px;
 }
 
 .color-option {
@@ -718,85 +799,85 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 10px 8px;
-  background: var(--bg-surface);
-  border: 2px solid var(--border-color);
+  padding: 12px 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-sm);
   transition: all var(--transition-fast);
   text-align: center;
+  backdrop-filter: var(--blur-subtle);
 }
 
 .color-option input[type="radio"]:checked + .color-option-box {
-  border-color: var(--gold);
-  background-color: var(--gold-subtle);
-  box-shadow: 0 0 0 2px rgba(197, 160, 89, 0.2);
+  border-color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.14);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+  transform: translateY(-2px);
 }
 
 .color-circle {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
   border-radius: var(--radius-pill);
   margin-bottom: 6px;
-  border: 2px solid #FFFFFF;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+  border: 2.5px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.4);
 }
 
 .color-name {
-  font-size: 0.78rem;
-  font-weight: 600;
-  color: var(--text-primary);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #FFFFFF;
 }
 
 .color-option.disabled {
-  opacity: 0.4;
+  opacity: 0.35;
   cursor: not-allowed;
-}
-
-.color-option.disabled .color-option-box {
-  background-color: #EEE;
-  border-style: dashed;
 }
 
 .color-status-note {
   font-size: 0.7rem;
-  color: var(--danger);
+  color: #F87171;
   margin-top: 2px;
 }
 
-/* Miqdar Tənzimləyici */
+/* Spatial Quantity Control */
 .quantity-control {
   display: inline-flex;
   align-items: center;
-  border: 1px solid var(--border-color);
-  border-radius: var(--radius-sm);
-  background-color: var(--bg-surface);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: var(--blur-subtle);
   overflow: hidden;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.15);
 }
 
 .qty-btn {
-  width: 38px;
-  height: 38px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 1.1rem;
-  color: var(--text-primary);
+  font-size: 1.15rem;
+  color: #FFFFFF;
   background: transparent;
   transition: background-color var(--transition-fast);
 }
 
 .qty-btn:hover {
-  background-color: var(--bg-secondary);
+  background-color: rgba(255, 255, 255, 0.15);
 }
 
 .qty-input {
   width: 44px;
-  height: 38px;
+  height: 40px;
   text-align: center;
   border: none;
-  font-weight: 600;
-  font-size: 0.95rem;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #FFFFFF;
   background: transparent;
 }
 
@@ -808,45 +889,50 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 18px;
-  padding-top: 14px;
-  border-top: 1px dashed var(--border-color);
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
 }
 
 .item-calc-price {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   color: var(--text-secondary);
 }
 
 .item-calc-price strong {
-  font-size: 1.05rem;
-  color: var(--text-primary);
-  margin-left: 4px;
+  font-size: 1.15rem;
+  color: var(--accent-gold);
+  margin-left: 6px;
+  text-shadow: 0 0 10px var(--accent-gold-glow);
 }
 
-/* Yeni Məhsul Əlavə Et Düyməsi */
+/* Glowing Add Product Button */
 .btn-add-product {
   width: 100%;
-  padding: 14px;
-  border: 2px dashed var(--gold);
+  padding: 16px;
+  border: 1.5px dashed rgba(0, 229, 255, 0.45);
   border-radius: var(--radius-md);
-  background-color: var(--gold-subtle);
-  color: var(--gold-hover);
+  background: rgba(0, 229, 255, 0.06);
+  color: var(--accent-cyan);
   font-weight: 700;
   font-size: 0.95rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
-  transition: all var(--transition-fast);
+  gap: 10px;
+  transition: all var(--transition-normal);
+  backdrop-filter: var(--blur-subtle);
 }
 
 .btn-add-product:hover {
-  background-color: #F4EAD3;
+  background: rgba(0, 229, 255, 0.12);
+  border-color: var(--accent-cyan);
+  box-shadow: 0 0 20px rgba(0, 229, 255, 0.25);
   transform: translateY(-2px);
+  color: #FFFFFF;
 }
 
-/* 7. ÇATDIRILMA SEÇİMİ (RADIO KARTLAR) */
+/* 7. DELIVERY SELECTION RADIO CARDS */
 .delivery-options-grid {
   display: flex;
   flex-direction: column;
@@ -869,24 +955,25 @@
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  padding: 18px;
-  background-color: var(--bg-surface);
-  border: 2px solid var(--border-color);
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1.5px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-md);
   transition: all var(--transition-fast);
+  backdrop-filter: var(--blur-subtle);
 }
 
 .delivery-radio-card input[type="radio"]:checked + .delivery-card-inner {
-  border-color: var(--gold);
-  background-color: var(--gold-subtle);
-  box-shadow: 0 4px 14px rgba(197, 160, 89, 0.12);
+  border-color: var(--accent-cyan);
+  background: rgba(0, 229, 255, 0.08);
+  box-shadow: 0 0 24px rgba(0, 229, 255, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
 .delivery-radio-circle {
-  width: 20px;
-  height: 20px;
+  width: 22px;
+  height: 22px;
   border-radius: var(--radius-pill);
-  border: 2px solid var(--border-color);
+  border: 2px solid rgba(255, 255, 255, 0.25);
   margin-top: 3px;
   flex-shrink: 0;
   position: relative;
@@ -894,18 +981,19 @@
 }
 
 .delivery-radio-card input[type="radio"]:checked + .delivery-card-inner .delivery-radio-circle {
-  border-color: var(--gold);
+  border-color: var(--accent-cyan);
 }
 
 .delivery-radio-card input[type="radio"]:checked + .delivery-card-inner .delivery-radio-circle::after {
   content: '';
   position: absolute;
-  top: 3px;
-  left: 3px;
+  top: 4px;
+  left: 4px;
   width: 10px;
   height: 10px;
   border-radius: var(--radius-pill);
-  background-color: var(--gold);
+  background-color: var(--accent-cyan);
+  box-shadow: 0 0 8px var(--accent-cyan);
 }
 
 .delivery-card-content {
@@ -921,52 +1009,45 @@
 
 .delivery-card-title {
   font-weight: 700;
-  font-size: 1rem;
-  color: var(--text-primary);
+  font-size: 1.05rem;
+  color: #FFFFFF;
 }
 
 .delivery-card-desc {
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   color: var(--text-secondary);
-  line-height: 1.45;
+  line-height: 1.5;
 }
 
-.delivery-notice-box {
-  margin-top: 8px;
-  font-size: 0.8rem;
-  color: var(--gold-hover);
-  background: rgba(197, 160, 89, 0.12);
-  padding: 6px 10px;
-  border-radius: var(--radius-sm);
-}
-
-/* Şərti çatdırılma sahələri */
 .conditional-delivery-field {
-  background-color: var(--bg-primary);
-  border: 1px solid var(--border-color);
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: var(--radius-md);
-  padding: 20px;
+  padding: 22px;
   margin-bottom: 24px;
+  backdrop-filter: var(--blur-subtle);
 }
 
-/* 8. SİFARİŞ YEKUN KARTI (STICKY SIDEBAR) */
+/* 8. ORDER SUMMARY SPATIAL DOCK */
 .order-summary-card {
   position: sticky;
-  top: 100px;
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-color);
+  top: 110px;
+  background: rgba(20, 26, 46, 0.78);
+  border: 1px solid var(--glass-border-bright);
   border-radius: var(--radius-lg);
-  padding: 32px 28px;
-  box-shadow: var(--shadow-md);
+  padding: 34px 28px;
+  box-shadow: var(--shadow-glass-lg);
+  backdrop-filter: var(--blur-glass);
 }
 
 .summary-heading {
   font-family: var(--font-serif);
-  font-size: 1.4rem;
-  font-weight: 600;
-  margin-bottom: 20px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid var(--border-color);
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: #FFFFFF;
+  margin-bottom: 22px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .summary-rows {
@@ -987,22 +1068,24 @@
 .summary-row.total-row {
   font-size: 1.25rem;
   font-weight: 700;
-  color: var(--text-primary);
-  padding-top: 16px;
-  border-top: 2px solid var(--border-color);
+  color: #FFFFFF;
+  padding-top: 18px;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
   margin-top: 8px;
 }
 
 .summary-row.total-row .total-amount {
-  font-size: 1.5rem;
-  color: var(--gold-hover);
+  font-size: 1.6rem;
+  color: var(--accent-gold);
+  text-shadow: 0 0 16px var(--accent-gold-glow);
 }
 
 .taxi-disclaimer {
-  font-size: 0.8rem;
-  color: var(--text-muted);
-  background-color: var(--bg-secondary);
-  padding: 10px 12px;
+  font-size: 0.82rem;
+  color: #FFB703;
+  background: rgba(255, 183, 3, 0.1);
+  border: 1px solid rgba(255, 183, 3, 0.25);
+  padding: 12px 14px;
   border-radius: var(--radius-sm);
   margin-bottom: 20px;
   line-height: 1.45;
@@ -1011,7 +1094,7 @@
 .summary-guarantees {
   margin-top: 24px;
   padding-top: 20px;
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -1021,17 +1104,18 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  font-size: 0.8rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
 }
 
-/* 9. ÇATDIRILMA CƏDVƏLİ VƏ MƏLUMAT SƏHİFƏSİ (DELIVERY.HTML) */
+/* 9. SPATIAL SCHEDULE TABLE */
 .schedule-table-card {
-  background-color: var(--bg-surface);
-  border: 1px solid var(--border-color);
+  background: var(--glass-base);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-glass);
+  backdrop-filter: var(--blur-glass);
   margin-bottom: 40px;
 }
 
@@ -1042,18 +1126,18 @@
 
 .schedule-table th,
 .schedule-table td {
-  padding: 16px 24px;
+  padding: 18px 24px;
   text-align: left;
-  border-bottom: 1px solid var(--border-color);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .schedule-table th {
-  background-color: var(--bg-secondary);
+  background: rgba(255, 255, 255, 0.04);
   font-weight: 700;
   font-size: 0.9rem;
-  color: var(--text-primary);
+  color: #FFFFFF;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
 }
 
 .schedule-table tr:last-child td {
@@ -1061,7 +1145,7 @@
 }
 
 .schedule-table tr:hover td {
-  background-color: var(--gold-subtle);
+  background: rgba(255, 255, 255, 0.06);
 }
 
 .delivery-details-grid {
@@ -1072,25 +1156,34 @@
 }
 
 .delivery-method-box {
-  background: var(--bg-surface);
-  border: 1px solid var(--border-color);
+  background: var(--glass-base);
+  border: 1px solid var(--glass-border);
   border-radius: var(--radius-lg);
-  padding: 30px;
+  padding: 32px 26px;
   display: flex;
   flex-direction: column;
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-glass);
+  backdrop-filter: var(--blur-glass);
+  transition: all var(--transition-normal);
+}
+
+.delivery-method-box:hover {
+  transform: translateY(-6px);
+  background: var(--glass-elevated);
+  border-color: var(--glass-border-bright);
 }
 
 .delivery-method-box .method-icon {
-  width: 52px;
-  height: 52px;
-  border-radius: var(--radius-md);
-  background-color: var(--gold-subtle);
-  color: var(--gold-hover);
+  width: 56px;
+  height: 56px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: var(--accent-cyan);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
@@ -1106,28 +1199,29 @@
   flex-grow: 1;
 }
 
-/* 10. WHATSAPP ÜZƏN DÜYMƏSİ (FLOATING BUTTON) */
+/* 10. SPATIAL FLOATING WHATSAPP PILL */
 .whatsapp-float-btn {
   position: fixed;
-  bottom: 28px;
-  right: 28px;
+  bottom: 30px;
+  right: 30px;
   z-index: 999;
-  width: 60px;
-  height: 60px;
+  width: 62px;
+  height: 62px;
   border-radius: var(--radius-pill);
-  background: #25D366;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
   color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
-  box-shadow: 0 6px 24px rgba(37, 211, 102, 0.45);
+  box-shadow: 0 8px 30px rgba(37, 211, 102, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.3);
   transition: all var(--transition-normal);
   text-decoration: none;
 }
 
 .whatsapp-float-btn:hover {
-  transform: scale(1.1);
-  box-shadow: 0 10px 30px rgba(37, 211, 102, 0.6);
+  transform: scale(1.1) translateY(-2px);
+  box-shadow: 0 14px 40px rgba(37, 211, 102, 0.7);
   color: #FFFFFF;
 }
 
@@ -1139,29 +1233,30 @@
 
 .whatsapp-pulse-ring {
   position: absolute;
-  top: -4px;
-  left: -4px;
-  right: -4px;
-  bottom: -4px;
+  top: -6px;
+  left: -6px;
+  right: -6px;
+  bottom: -6px;
   border-radius: var(--radius-pill);
-  border: 2px solid #25D366;
-  animation: pulse-ring 2s infinite cubic-bezier(0.25, 0, 0, 1);
+  border: 2px solid rgba(37, 211, 102, 0.6);
+  animation: pulse-ring 2.4s infinite cubic-bezier(0.25, 0, 0, 1);
   pointer-events: none;
 }
 
 @keyframes pulse-ring {
-  0% { transform: scale(0.95); opacity: 0.8; }
-  70% { transform: scale(1.3); opacity: 0; }
-  100% { transform: scale(1.3); opacity: 0; }
+  0% { transform: scale(0.95); opacity: 0.9; }
+  70% { transform: scale(1.35); opacity: 0; }
+  100% { transform: scale(1.35); opacity: 0; }
 }
 
-/* 11. FOOTER */
+/* 11. SPATIAL GLASS FOOTER */
 .site-footer {
-  background-color: var(--bg-dark);
-  color: #DDD8D0;
-  padding: 70px 0 30px 0;
+  background: rgba(10, 13, 24, 0.85);
+  backdrop-filter: var(--blur-glass);
+  color: var(--text-secondary);
+  padding: 75px 0 32px 0;
   margin-top: auto;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid var(--glass-border);
 }
 
 .footer-grid {
@@ -1171,21 +1266,17 @@
   margin-bottom: 50px;
 }
 
-.footer-brand .brand-logo-fallback .logo-serif {
-  color: #FFFFFF;
-}
-
 .footer-brand p {
   font-size: 0.9rem;
-  color: #9E978E;
-  margin: 16px 0 24px 0;
+  color: var(--text-muted);
+  margin: 18px 0 24px 0;
   line-height: 1.6;
 }
 
 .footer-heading {
   font-family: var(--font-serif);
   font-size: 1.15rem;
-  font-weight: 600;
+  font-weight: 700;
   color: #FFFFFF;
   margin-bottom: 20px;
 }
@@ -1198,36 +1289,39 @@
 
 .footer-links a {
   font-size: 0.9rem;
-  color: #AAA399;
+  color: var(--text-secondary);
   transition: color var(--transition-fast);
 }
 
 .footer-links a:hover {
-  color: var(--gold-light);
+  color: var(--accent-cyan);
 }
 
 .footer-social-links {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-top: 10px;
 }
 
 .social-btn {
-  width: 42px;
-  height: 42px;
+  width: 44px;
+  height: 44px;
   border-radius: var(--radius-pill);
-  background-color: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   color: #FFFFFF;
   display: flex;
   align-items: center;
   justify-content: center;
+  backdrop-filter: var(--blur-subtle);
   transition: all var(--transition-fast);
 }
 
 .social-btn:hover {
-  background-color: var(--gold);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--accent-pink);
   transform: translateY(-2px);
+  box-shadow: 0 0 15px var(--accent-pink-glow);
 }
 
 .footer-bottom {
@@ -1237,10 +1331,10 @@
   align-items: center;
   justify-content: space-between;
   font-size: 0.85rem;
-  color: #8A8379;
+  color: var(--text-muted);
 }
 
-/* 12. TOAST BİLDİRİŞ SİSTEMİ */
+/* 12. TOAST NOTIFICATION */
 .toast-container {
   position: fixed;
   bottom: 30px;
@@ -1254,13 +1348,15 @@
 }
 
 .toast {
-  background-color: var(--bg-dark);
+  background: rgba(18, 24, 44, 0.92);
+  backdrop-filter: var(--blur-glass);
+  border: 1px solid var(--glass-border-bright);
   color: #FFFFFF;
-  padding: 14px 22px;
+  padding: 14px 24px;
   border-radius: var(--radius-pill);
   font-size: 0.9rem;
-  font-weight: 500;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+  font-weight: 600;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
   gap: 10px;
@@ -1276,9 +1372,11 @@
 }
 
 .toast.toast-error {
-  background-color: var(--danger);
+  border-color: rgba(239, 68, 68, 0.5);
+  box-shadow: 0 8px 30px rgba(239, 68, 68, 0.35);
 }
 
 .toast.toast-success {
-  background-color: var(--success);
+  border-color: rgba(16, 185, 129, 0.5);
+  box-shadow: 0 8px 30px rgba(16, 185, 129, 0.35);
 }

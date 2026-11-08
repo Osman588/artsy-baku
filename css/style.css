@@ -1,67 +1,86 @@
 /* ============================================================
-   ARTSY BAKU — ƏSAS DİZAYN SİSTEMİ VƏ ÜMUMİ STİLLƏR
+   ARTSY BAKU — SPATIAL UI DESIGN SYSTEM & GLOBAL TOKENS
+   Inspired by visionOS / Spatial Computing aesthetics:
+   Frosted glass, dimensional depth, specular highlights & luminous chromatic accents.
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap');
 
 :root {
-  /* Əsas Rəng Palitrası */
-  --bg-primary: #FAF8F5;
-  --bg-surface: #FFFFFF;
-  --bg-secondary: #F4EFEB;
-  --bg-card: #FFFFFF;
-  --bg-dark: #1A1816;
+  /* Spatial Canvas Base (Deep Cosmic Obsidian) */
+  --bg-primary: #0A0C14;
+  --bg-secondary: #0F121F;
+  --bg-canvas-glow: radial-gradient(circle at 50% 0%, rgba(255, 46, 147, 0.12) 0%, transparent 45%),
+                    radial-gradient(circle at 90% 20%, rgba(0, 229, 255, 0.1) 0%, transparent 40%),
+                    radial-gradient(circle at 10% 60%, rgba(255, 183, 3, 0.08) 0%, transparent 45%),
+                    #0A0C14;
 
-  --text-primary: #1E1B18;
-  --text-secondary: #59534C;
-  --text-muted: #8C847A;
+  /* Spatial Glass Surfaces */
+  --glass-base: rgba(18, 22, 38, 0.65);
+  --glass-elevated: rgba(26, 32, 54, 0.75);
+  --glass-subtle: rgba(255, 255, 255, 0.04);
+  --glass-highlight: rgba(255, 255, 255, 0.09);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-border-bright: rgba(255, 255, 255, 0.24);
+
+  /* Typography Colors */
+  --text-primary: #F8FAFC;
+  --text-secondary: #CBD5E1;
+  --text-muted: #8E9BAE;
   --text-light: #FFFFFF;
 
-  --gold: #C5A059;
-  --gold-hover: #AF8B45;
-  --gold-light: #E7D5B2;
-  --gold-subtle: #F9F5EC;
-  
-  --rose: #D96A83;
-  --rose-soft: #FCF1F3;
-  
-  --success: #2E8B57;
-  --success-bg: #E8F5E9;
-  --danger: #D32F2F;
-  --danger-bg: #FFEBEE;
-  --warning: #ED6C02;
+  /* Chromatic Logo Accents (Pink, Gold, Cyan) */
+  --accent-pink: #FF2E93;
+  --accent-pink-glow: rgba(255, 46, 147, 0.4);
+  --accent-gold: #FFB703;
+  --accent-gold-glow: rgba(255, 183, 3, 0.35);
+  --accent-cyan: #00E5FF;
+  --accent-cyan-glow: rgba(0, 229, 255, 0.35);
 
-  --border-color: #E8E2D9;
-  --border-light: #F2ECE3;
-  --border-focus: #C5A059;
+  --gold: #FFB703;
+  --gold-hover: #FFA200;
+  --gold-light: #FFE082;
+  --gold-subtle: rgba(255, 183, 3, 0.12);
 
-  /* Tipoqrafiya */
-  --font-serif: 'Playfair Display', Georgia, serif;
-  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  /* Status Colors */
+  --success: #10B981;
+  --success-bg: rgba(16, 185, 129, 0.14);
+  --danger: #EF4444;
+  --danger-bg: rgba(239, 68, 68, 0.16);
+  --warning: #F59E0B;
 
-  /* Kölgələr */
-  --shadow-sm: 0 2px 8px rgba(30, 27, 24, 0.04);
-  --shadow-md: 0 8px 24px rgba(30, 27, 24, 0.06);
-  --shadow-lg: 0 16px 40px rgba(30, 27, 24, 0.08);
-  --shadow-gold: 0 8px 25px rgba(197, 160, 89, 0.25);
+  /* Spatial Lighting & Shadows */
+  --shadow-glass: 0 16px 40px rgba(0, 0, 0, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.14);
+  --shadow-glass-lg: 0 24px 70px rgba(0, 0, 0, 0.65), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  --shadow-glow-pink: 0 8px 30px rgba(255, 46, 147, 0.3);
+  --shadow-glow-cyan: 0 8px 30px rgba(0, 229, 255, 0.3);
+  --shadow-glow-gold: 0 8px 30px rgba(255, 183, 3, 0.3);
 
-  /* Radius */
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
+  /* Blur Filters */
+  --blur-glass: blur(28px);
+  --blur-subtle: blur(14px);
+
+  /* Radii */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 26px;
   --radius-pill: 9999px;
 
-  /* Keçidlər */
-  --transition-fast: 0.2s ease;
-  --transition-normal: 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-slow: 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  /* Transitions */
+  --transition-fast: 0.2s cubic-bezier(0.2, 0.8, 0.2, 1);
+  --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 
-  /* Ölçülər */
-  --container-max: 1200px;
-  --header-height: 80px;
+  /* Fonts */
+  --font-serif: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Layout */
+  --container-max: 1220px;
+  --header-height: 84px;
 }
 
-/* Reset və Əsas Tənzimləmələr */
+/* Reset */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -78,15 +97,45 @@ html {
 body {
   font-family: var(--font-sans);
   background-color: var(--bg-primary);
+  background-image: var(--bg-canvas-glow);
+  background-attachment: fixed;
+  background-size: cover;
   color: var(--text-primary);
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
+  position: relative;
 }
 
-/* Şəkillər */
+/* Ambient spatial light orbs in background */
+body::before {
+  content: '';
+  position: fixed;
+  top: -10vw;
+  right: -5vw;
+  width: 50vw;
+  height: 50vw;
+  background: radial-gradient(circle, rgba(0, 229, 255, 0.12) 0%, transparent 65%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  bottom: -15vw;
+  left: -10vw;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(255, 46, 147, 0.1) 0%, transparent 65%);
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 0;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -96,7 +145,7 @@ img {
 a {
   color: inherit;
   text-decoration: none;
-  transition: color var(--transition-fast);
+  transition: all var(--transition-fast);
 }
 
 button, input, select, textarea {
@@ -114,7 +163,6 @@ ul, ol {
   list-style: none;
 }
 
-/* Konteyner */
 .container {
   width: 100%;
   max-width: var(--container-max);
@@ -122,31 +170,36 @@ ul, ol {
   margin-right: auto;
   padding-left: 24px;
   padding-right: 24px;
+  position: relative;
+  z-index: 1;
 }
 
-/* Tipoqrafiya Sinifləri */
+/* Typography Hierarchy */
 .heading-xl {
   font-family: var(--font-serif);
-  font-size: clamp(2.4rem, 4.5vw, 3.8rem);
-  font-weight: 600;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: var(--text-primary);
+  font-size: clamp(2.4rem, 4.8vw, 4.2rem);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  color: #FFFFFF;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
 }
 
 .heading-lg {
   font-family: var(--font-serif);
-  font-size: clamp(1.8rem, 3vw, 2.5rem);
-  font-weight: 600;
-  line-height: 1.25;
-  letter-spacing: -0.01em;
+  font-size: clamp(1.8rem, 3.2vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
 }
 
 .heading-md {
   font-family: var(--font-serif);
-  font-size: clamp(1.4rem, 2.2vw, 1.8rem);
+  font-size: clamp(1.4rem, 2.2vw, 1.85rem);
   font-weight: 600;
   line-height: 1.3;
+  color: #FFFFFF;
 }
 
 .heading-sm {
@@ -154,6 +207,7 @@ ul, ol {
   font-size: 1.15rem;
   font-weight: 600;
   line-height: 1.4;
+  color: #FFFFFF;
 }
 
 .text-lead {
@@ -167,32 +221,36 @@ ul, ol {
   font-size: 0.9rem;
 }
 
+/* Spatial Pill Tag */
 .section-tag {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   font-size: 0.8rem;
-  font-weight: 600;
+  font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.14em;
-  color: var(--gold-hover);
-  background-color: var(--gold-subtle);
-  padding: 6px 14px;
+  letter-spacing: 0.16em;
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 6px 16px;
   border-radius: var(--radius-pill);
-  margin-bottom: 14px;
+  margin-bottom: 16px;
+  backdrop-filter: var(--blur-subtle);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.25), inset 0 1px 0 rgba(255,255,255,0.2);
 }
 
 .section-header {
   text-align: center;
-  max-width: 680px;
-  margin: 0 auto 48px auto;
+  max-width: 720px;
+  margin: 0 auto 52px auto;
 }
 
 .section-header .heading-lg {
-  margin-bottom: 12px;
+  margin-bottom: 14px;
 }
 
-/* Düymələr */
+/* Spatial Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -205,60 +263,76 @@ ul, ol {
   transition: all var(--transition-normal);
   text-align: center;
   white-space: nowrap;
+  position: relative;
+  overflow: hidden;
 }
 
+/* Primary Spatial Luminous Button */
 .btn-primary {
-  background-color: var(--text-primary);
+  background: linear-gradient(135deg, rgba(255, 46, 147, 0.9) 0%, rgba(255, 183, 3, 0.9) 100%);
   color: #FFFFFF;
-  box-shadow: 0 4px 14px rgba(30, 27, 24, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 24px rgba(255, 46, 147, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.4);
 }
 
 .btn-primary:hover {
-  background-color: var(--gold);
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 12px 32px rgba(255, 46, 147, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  filter: brightness(1.1);
   color: #FFFFFF;
-  box-shadow: var(--shadow-gold);
-  transform: translateY(-2px);
 }
 
-.btn-gold {
-  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-hover) 100%);
-  color: #FFFFFF;
-  box-shadow: var(--shadow-gold);
-}
-
-.btn-gold:hover {
-  filter: brightness(1.08);
-  transform: translateY(-2px);
-}
-
+/* Secondary Frosted Glass Button */
 .btn-secondary {
-  background-color: var(--bg-surface);
-  color: var(--text-primary);
-  border: 1px solid var(--border-color);
-  box-shadow: var(--shadow-sm);
+  background: rgba(255, 255, 255, 0.08);
+  color: #FFFFFF;
+  border: 1px solid var(--glass-border);
+  backdrop-filter: var(--blur-subtle);
+  box-shadow: var(--shadow-glass);
 }
 
 .btn-secondary:hover {
-  border-color: var(--gold);
-  color: var(--gold-hover);
-  background-color: var(--gold-subtle);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: var(--glass-border-bright);
   transform: translateY(-2px);
+  color: #FFFFFF;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.3);
 }
 
+/* Gold Gradient Button */
+.btn-gold {
+  background: linear-gradient(135deg, #FFB703 0%, #FF8C00 100%);
+  color: #0A0C14;
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 26px rgba(255, 183, 3, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+}
+
+.btn-gold:hover {
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.08);
+  box-shadow: 0 12px 34px rgba(255, 183, 3, 0.5);
+  color: #0A0C14;
+}
+
+/* WhatsApp Luminous Button */
 .btn-whatsapp {
-  background: linear-gradient(135deg, #25D366 0%, #1EBE5D 100%);
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
   color: #FFFFFF;
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.28);
+  font-weight: 700;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 26px rgba(37, 211, 102, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.4);
 }
 
 .btn-whatsapp:hover {
-  filter: brightness(1.06);
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(37, 211, 102, 0.38);
+  transform: translateY(-2px) scale(1.02);
+  filter: brightness(1.1);
+  box-shadow: 0 12px 34px rgba(37, 211, 102, 0.5);
+  color: #FFFFFF;
 }
 
 .btn-sm {
-  padding: 8px 16px;
+  padding: 9px 18px;
   font-size: 0.85rem;
 }
 
@@ -266,47 +340,59 @@ ul, ol {
   width: 100%;
 }
 
-/* Bölmə məsafələri */
+/* Section Containers */
 .section {
-  padding: 80px 0;
+  padding: 90px 0;
+  position: relative;
+  z-index: 1;
 }
 
 .section-sm {
-  padding: 50px 0;
+  padding: 55px 0;
+  position: relative;
+  z-index: 1;
 }
 
 .bg-secondary {
-  background-color: var(--bg-secondary);
+  background: rgba(14, 18, 32, 0.55);
+  backdrop-filter: var(--blur-subtle);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .bg-white {
-  background-color: var(--bg-surface);
+  background: transparent;
 }
 
-/* Badge */
+/* Badges */
 .badge {
   display: inline-flex;
   align-items: center;
-  padding: 4px 10px;
+  padding: 4px 12px;
   font-size: 0.75rem;
-  font-weight: 600;
+  font-weight: 700;
   border-radius: var(--radius-pill);
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.06em;
+  backdrop-filter: var(--blur-subtle);
 }
 
 .badge-gold {
-  background: var(--gold-subtle);
-  color: var(--gold-hover);
-  border: 1px solid var(--gold-light);
+  background: rgba(255, 183, 3, 0.15);
+  color: #FFB703;
+  border: 1px solid rgba(255, 183, 3, 0.35);
+  box-shadow: 0 0 12px rgba(255, 183, 3, 0.2);
 }
 
 .badge-green {
-  background: var(--success-bg);
-  color: var(--success);
+  background: rgba(16, 185, 129, 0.15);
+  color: #34D399;
+  border: 1px solid rgba(16, 185, 129, 0.35);
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.2);
 }
 
 .badge-red {
-  background: var(--danger-bg);
-  color: var(--danger);
+  background: rgba(239, 68, 68, 0.15);
+  color: #F87171;
+  border: 1px solid rgba(239, 68, 68, 0.35);
 }
