@@ -140,7 +140,19 @@ function renderOrderItemHTML(item) {
 
     <!-- Canlı gül rəngi -->
     <div class="form-group">
-      <label class="form-label">Şüşə tüb daxilindəki canlı gül rəngi <span class="req">*</span> <span class="help-text">(6 rəng)</span></label>
+      <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 8px;">
+        <label class="form-label" style="margin-bottom: 0;">Şüşə tüb daxilindəki canlı gül rəngi <span class="req">*</span></label>
+        <span class="badge badge-gold" style="font-size: 0.72rem;">6 Rəng Seçimi</span>
+      </div>
+
+      <!-- Real Gül Şəkli İstinadı -->
+      <div style="margin-bottom: 12px; border-radius: var(--radius-sm); overflow: hidden; border: 1px solid rgba(255, 255, 255, 0.14); background: rgba(0, 0, 0, 0.45); padding: 8px; text-align: center;">
+        <img src="assets/images/flower-colors.jpg" alt="Gül Rəng Seçin" style="width: 100%; max-height: 140px; object-fit: contain; margin: 0 auto; filter: drop-shadow(0 2px 6px rgba(0,0,0,0.5));">
+        <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 6px;">
+          👆 <strong>Real gül rəngləri:</strong> 1. Çəhrayı | 2. Sarı | 3. Narıncı | 4. Qırmızı | 5. Bənövşəyi | 6. Yaşıl
+        </div>
+      </div>
+
       <div class="color-picker-grid">
         ${flowerOptions}
       </div>
