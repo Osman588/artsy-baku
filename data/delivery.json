@@ -1,0 +1,45 @@
+{
+  "methods": [
+    {
+      "id": "metro",
+      "name": "Metroda təhvil",
+      "price": 0,
+      "badge": "PULSUZ",
+      "description": "Seçilmiş metro stansiyasında təhvil verilir. Əlavə ödəniş yoxdur.",
+      "locations": [
+        "Nərimanov metrosu",
+        "28 May metrosu",
+        "Gənclik metrosu"
+      ]
+    },
+    {
+      "id": "taxi",
+      "name": "Birbaşa ünvana — Taxi kuryer",
+      "price": 0,
+      "badge": "Sürətli çatdırılma",
+      "description": "Bakı daxilində ünvanınıza taxi kuryer ilə çatdırılır. Kuryer haqqı məhsul çatdırıldıqda birbaşa kuryerə ödənilir.",
+      "notice": "Taxi kuryer haqqı saytın sifariş məbləğinə daxil edilmir və kuryerə nağd / kartla birbaşa ödənilir."
+    },
+    {
+      "id": "cargo",
+      "name": "Azərpoçt / Karqo",
+      "price": 4,
+      "badge": "4 AZN",
+      "description": "Bakıətrafı qəsəbələr və bütün rayonlara poçt / karqo vasitəsilə çatdırılma.",
+      "notice": "Sabit 4 AZN çatdırılma haqqı sifarişin yekun məbləğinə əlavə edilir."
+    }
+  ],
+  "schedule": [
+    { "day": "Bazar ertəsi", "hours": "08:00 – 22:00" },
+    { "day": "Çərşənbə axşamı", "hours": "16:00 – 22:00" },
+    { "day": "Çərşənbə", "hours": "16:00 – 22:00" },
+    { "day": "Cümə axşamı", "hours": "16:00 – 22:00" },
+    { "day": "Cümə", "hours": "15:00 – 22:00" },
+    { "day": "Şənbə", "hours": "08:00 – 22:00" },
+    { "day": "Bazar", "hours": "08:00 – 22:00" }
+  ],
+  "notes": [
+    "Bütün saatlar Bakı yerli vaxtı ilə göstərilmişdir.",
+    "Sayt vasitəsilə göndərilən çatdırılma vaxtı təklif xarakteri daşıyır. Dəqiq çatdırılma saatı WhatsApp üzərindən biznes sahibi ilə razılaşdırılacaqdır."
+  ]
+}

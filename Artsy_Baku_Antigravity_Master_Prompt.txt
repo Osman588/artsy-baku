@@ -1,0 +1,510 @@
+ARTSY BAKU — TAM VEB-SAYT TEXNİKİ TAPŞIRIĞI
+
+Sənəd: PRD + TRD + Antigravity Master Prompt Layihə: Artsy Baku Veb-sayt
+dili: Azərbaycan dili Valyuta: AZN Hosting: GitHub Pages Texnologiyalar:
+HTML, CSS, JavaScript, JSON Backend: Yoxdur Database: Yoxdur Sifariş
+kanalı: WhatsApp
+
+============================================================ PART 1 —
+PRD (MƏHSUL TƏLƏBLƏRİ)
+============================================================
+
+1.  LAYİHƏNİN MƏQSƏDİ
+
+Artsy Baku əl işi məhsullarının təqdimatı və sifarişi üçün müasir,
+estetik və mobil uyğun veb-sayt yarat.
+
+Müştərilər saytda: - Məhsullara baxa bilməlidir. - Məhsul şəkillərini və
+qiymətlərini görə bilməlidir. - Mövcud gül rənglərini seçə bilməlidir. -
+Bir sifarişə bir neçə fərqli məhsul əlavə edə bilməlidir. - Çatdırılma
+üsulunu seçə bilməlidir. - Şəxsi məlumatlarını daxil edə bilməlidir. -
+Ümumi məbləği görə bilməlidir. - Sifarişi WhatsApp vasitəsilə göndərə
+bilməlidir.
+
+Bu, klassik onlayn mağaza deyil. Saytda səbət, onlayn ödəniş, istifadəçi
+hesabı və server sistemi olmayacaq.
+
+2.  BİZNES MƏLUMATLARI
+
+Brend: Artsy Baku WhatsApp: +994516138069 Instagram:
+https://www.instagram.com/artsybaku?rpxt=MWowZDJzYm9rZ29ocg== TikTok:
+https://www.tiktok.com/@artsybaku?_r=1&_t=ZS-9BE5eZiRRq8
+
+Bütün əlaqə məlumatları konfiqurasiya faylında saxlanılmalıdır.
+
+3.  MƏHSUL KATALOQU
+
+Hazırda 4 məhsul mövcuddur. Bütün məhsulların qiyməti 23 AZN-dir.
+
+ID | Məhsul | Qiymət sep-a | SEP A – QÜMÜŞÜ | 23 AZN sep-b | SEP B –
+QIZILI | 23 AZN qolbag | QOLBAQ | 23 AZN brelok | BRELOK / ASMAQ ÜÇÜN |
+23 AZN
+
+Məhsullar üçün təqdim edilən orijinal şəkillərdən istifadə edilməlidir.
+
+Tələblər: - Süni yaradılmış məhsul şəkilləri ilə əvəz edilməsin. -
+Məhsulların dizaynı dəyişdirilməsin. - Yeni məhsullar uydurulmasın. -
+Qiymətlər konfiqurasiya faylından dəyişdirilə bilsin.
+
+4.  GÜL RƏNGLƏRİNİN SEÇİMİ
+
+Altı rəng mövcuddur: 1. Çəhrayı 2. Sarı 3. Narıncı 4. Qırmızı 5.
+Bənövşəyi 6. Yaşıl
+
+Təqdim edilən gül rəngləri şəkli rənglər üçün vizual istinad kimi
+istifadə olunmalıdır.
+
+Tələblər: - Rənglər vizual dairəvi seçimlər şəklində göstərilsin. - Hər
+məhsul üçün ayrıca rəng seçilsin. - Mövcud olmayan rəng seçilə
+bilməsin. - Mövcud olmayan rəngin yanında uyğun bildiriş göstərilsin. -
+Hər məhsulun seçilmiş rəngi WhatsApp sifariş mesajında göstərilsin. -
+Eyni sifarişdə fərqli məhsullar üçün fərqli rənglər seçilə bilsin.
+
+5.  VEB-SAYTIN SƏHİFƏLƏRİ
+
+5.1 Ana səhifə — index.html
+
+Daxil edilməlidir: - Artsy Baku loqosu. - Naviqasiya menyusu. - Böyük və
+estetik giriş bölməsi. - Əl işləri haqqında qısa təqdimat. - Məhsullara
+baxış düyməsi. - Seçilmiş məhsullar. - Çatdırılma haqqında qısa
+məlumat. - Instagram və TikTok keçidləri. - WhatsApp əlaqə düyməsi. -
+Footer.
+
+5.2 Məhsullar — products.html
+
+Bütün məhsullar responsiv grid şəklində göstərilməlidir.
+
+Hər məhsul kartında: - Məhsul şəkli. - Məhsulun adı. - Qiyməti. -
+Mövcudluq statusu. - Ətraflı məlumat düyməsi. - Sifariş düyməsi.
+
+Məhsul mövcud deyilsə, onun sifariş edilməsi mümkün olmamalıdır.
+
+5.3 Sifariş — order.html
+
+Ən vacib funksionallıq çoxməhsullu sifariş formasıdır.
+
+ƏN VACİB QAYDA: Klassik səbət sistemi YOXDUR.
+
+Sifariş prosesi: 1. Müştəri birinci məhsulu seçir. 2. Gül rəngini seçir.
+3. Sayını daxil edir. 4. İstəyə görə əlavə qeyd yazır. 5. “+ Başqa
+məhsul əlavə et” düyməsinə basır. 6. Yeni məhsul seçimi açılır. 7.
+İstədiyi qədər məhsul əlavə edə bilir. 8. Hər məhsulun rəngini ayrıca
+seçir. 9. Müştəri məlumatlarını daxil edir. 10. Çatdırılma üsulunu
+seçir. 11. Ümumi məbləğ avtomatik hesablanır. 12. “Sifarişi WhatsApp-a
+göndər” düyməsinə basır.
+
+Hər məhsul bölməsində: - Məhsul seçimi. - Gül rəngi seçimi. - Say. -
+Əlavə qeydlər. - Məhsulu silmək düyməsi.
+
+Müştəri seçdiyi məhsulları və rəngləri dəyişə bilməlidir.
+
+5.4 ÇATDIRILMA BÖLMƏSİ
+
+Üç çatdırılma üsulu olacaq.
+
+1.  Metroda təhvil — PULSUZ
+
+Məkanlar: - Nərimanov metrosu. - 28 May metrosu. - Gənclik metrosu.
+
+Çatdırılma haqqı: 0 AZN. Müştəri üç məkandan birini seçməlidir.
+
+2.  Birbaşa ünvana — TAXI KURYER
+
+-   Məhsul müştərinin ünvanına taxi kuryer vasitəsilə çatdırılır.
+-   Müştəri tam ünvanını daxil etməlidir.
+-   Taxi kuryerin ödənişini müştəri məhsulu qəbul edərkən birbaşa
+    kuryerə ödəyir.
+-   Taxi kuryer haqqı saytın sifariş məbləğinə daxil edilmir.
+-   Saytda bununla bağlı aydın məlumat göstərilməlidir.
+
+3.  Azerpoçt / Karqo
+
+-   Əsasən Bakıdan kənar və şəhərin kənar ərazilərində yaşayan
+    müştərilər üçün.
+-   Çatdırılma haqqı sabit 4 AZN-dir.
+-   4 AZN sifarişin ümumi məbləğinə əlavə edilməlidir.
+-   Müştəri ünvanını, rayonunu və əlaqə məlumatlarını daxil etməlidir.
+
+5.5 ÇATDIRILMA SAATLARI
+
+Bazar: 08:00–22:00 Bazar ertəsi: 08:00–22:00 Çərşənbə axşamı:
+16:00–22:00 Çərşənbə: 16:00–22:00 Cümə axşamı: 16:00–22:00 Cümə:
+15:00–22:00 Şənbə: 08:00–22:00
+
+Saatlar Bakı yerli vaxtı ilə göstərilməlidir.
+
+Müştəri mümkün çatdırılma gününü və uyğun saatı seçə bilər. Sayt
+çatdırılmanı avtomatik təsdiqləməməlidir. Son təsdiq WhatsApp vasitəsilə
+biznes sahibi tərəfindən həyata keçiriləcək.
+
+6.  MÜŞTƏRİ MƏLUMATLARI
+
+Məcburi məlumatlar: - Ad və soyad. - Telefon nömrəsi. - Çatdırılma
+üsulu.
+
+Şərti məlumatlar: - Metro seçildikdə təhvil məntəqəsi. - Taxi seçildikdə
+tam ünvan. - Azerpoçt/Karqo seçildikdə ünvan və rayon.
+
+İstəyə bağlı: - Əlavə qeydlər. - Fərdi sifariş istəkləri. - Çatdırılma
+üçün üstünlük verilən gün və saat.
+
+7.  QİYMƏT HESABLANMASI
+
+Bütün məhsullar 23 AZN-dir.
+
+Məhsul məbləği = Məhsulun qiyməti × Say.
+
+Ümumi məbləğ: - Metro: Məhsulların ümumi qiyməti. - Taxi: Məhsulların
+ümumi qiyməti. - Azerpoçt/Karqo: Məhsulların ümumi qiyməti + 4 AZN.
+
+Nümunə: 3 məhsul: 23 × 3 = 69 AZN. Karqo: 69 + 4 = 73 AZN.
+
+Taxi kuryer haqqı heç vaxt saytın hesabladığı məbləğə əlavə
+edilməməlidir.
+
+8.  WHATSAPP SİFARİŞ SİSTEMİ
+
+WhatsApp nömrəsi: 994516138069
+
+Müştəri “Sifarişi WhatsApp-a göndər” düyməsinə basdıqda: - Formanın
+düzgünlüyü yoxlanılsın. - Bütün sifariş məlumatları toplansın. -
+Səliqəli Azərbaycan dilində mesaj hazırlansın. - Mesaj URL encode
+edilsin. - WhatsApp açılsın. - Müştəri mesajı özü göndərsin.
+
+Nümunə mesaj:
+
+ARTSY BAKU — YENİ SİFARİŞ
+
+MÜŞTƏRİ MƏLUMATLARI: Ad: Müştərinin adı Telefon: Müştərinin nömrəsi
+
+SİFARİŞ:
+
+Məhsul 1: Ad: SEP A – QÜMÜŞÜ Gül rəngi: Çəhrayı Say: 2 Vahid qiymət: 23
+AZN Məbləğ: 46 AZN
+
+Məhsul 2: Ad: QOLBAQ Gül rəngi: Bənövşəyi Say: 1 Vahid qiymət: 23 AZN
+Məbləğ: 23 AZN
+
+MƏHSULLARIN CƏMİ: 69 AZN
+
+ÇATDIRILMA: Üsul: Azerpoçt / Karqo Ünvan: Müştərinin ünvanı Çatdırılma
+haqqı: 4 AZN
+
+YEKUN MƏBLƏĞ: 73 AZN
+
+Əlavə qeydlər: Müştərinin qeydləri.
+
+Artsy Baku-ya üstünlük verdiyiniz üçün təşəkkür edirik!
+
+Mesaj seçilmiş məhsullara, rənglərə, saylara və çatdırılma üsuluna uyğun
+dinamik yaradılmalıdır.
+
+9.  DİZAYN TƏLƏBLƏRİ
+
+Dizayn istiqaməti: - Zərif və estetik. - Əl işi brendinə uyğun. -
+Minimalist və premium görünüş. - Məhsul şəkilləri ön planda. - Təmiz və
+rahat naviqasiya. - Müasir tipoqrafiya. - Yumşaq animasiyalar. -
+Keyfiyyətli məhsul kartları. - Gözəl rəng seçimləri. - Sadə sifariş
+prosesi.
+
+Ümumi dizayn adi korporativ şablona bənzəməməlidir. Müstəqil, peşəkar əl
+işi brendi təsiri yaratmalıdır.
+
+10. MOBİL UYĞUNLUQ
+
+Aşağıdakı cihazlarda işləməlidir: - Android. - iPhone. - Planşetlər. -
+Windows kompüterlər. - Desktop brauzerlər.
+
+Mobil versiyaya xüsusi diqqət yetirilməlidir.
+
+11. DİL TƏLƏBLƏRİ
+
+Veb-saytın bütün müştəriyə görünən mətnləri Azərbaycan dilində
+olmalıdır.
+
+Buraya daxildir: - Menyu. - Düymələr. - Məhsul adları. - Məhsul
+təsvirləri. - Qiymətlər. - Çatdırılma məlumatları. - Sifariş forması. -
+Xəta bildirişləri. - Uğurlu əməliyyat bildirişləri. - WhatsApp mesajı. -
+Footer.
+
+HTML, CSS, JavaScript dəyişənləri və JSON açarları ingilis dilində qala
+bilər.
+
+Azərbaycan hərfləri düzgün dəstəklənməlidir: ə, ı, ö, ü, ş, ç, ğ. Bütün
+HTML səhifələrində UTF-8 istifadə edilməlidir.
+
+============================================================ PART 2 —
+TRD (TEXNİKİ TƏLƏBLƏR)
+============================================================
+
+1.  TEXNOLOGİYALAR
+
+Frontend: - HTML5. - CSS3. - Vanilla JavaScript ES6+.
+
+Məlumatlar: JSON Versiya idarəetməsi: Git, GitHub Hosting: GitHub Pages
+
+İstifadə edilməməlidir: - Firebase. - Supabase. - PHP. - Node.js
+backend. - Python backend. - MySQL. - MongoDB. - Ödəniş sistemləri. -
+İstifadəçi autentifikasiyası.
+
+Lazımsız framework və kitabxanalardan istifadə etmə.
+
+2.  LAYİHƏ STRUKTURU
+
+artsy-baku/ ├── index.html ├── products.html ├── order.html ├──
+delivery.html ├── css/ │ ├── style.css │ ├── responsive.css │ └──
+components.css ├── js/ │ ├── main.js │ ├── products.js │ ├── order.js │
+├── delivery.js │ ├── whatsapp.js │ └── config.js ├── data/ │ ├──
+store.json │ └── delivery.json ├── assets/ │ ├── images/ │ │ ├──
+products/ │ │ └── branding/ │ │ └── logo.png │ └── icons/ ├── README.md
+├── sitemap.xml ├── robots.txt └── .gitignore
+
+3.  ƏSAS İDARƏETMƏ FAYLI — store.json
+
+Məhsulların statusunu dəyişmək üçün ayrıca fayllar arasında axtarış
+etmək lazım olmasın. Bütün əsas mağaza məlumatları data/store.json
+faylında saxlanılsın.
+
+Buraya daxildir: - Biznesin adı. - WhatsApp nömrəsi. - Instagram
+linki. - TikTok linki. - Valyuta. - Məhsullar. - Məhsul qiymətləri. -
+Məhsulların mövcudluq statusu. - Gül rəngləri. - Gül rənglərinin
+mövcudluq statusu.
+
+Aşağıdakı nümunəni real layihədə tam və düzgün JSON kimi yarat:
+
+{ “business”: { “name”: “Artsy Baku”, “whatsapp”: “994516138069”,
+“instagram”:
+“https://www.instagram.com/artsybaku?rpxt=MWowZDJzYm9rZ29ocg==”,
+“tiktok”: “https://www.tiktok.com/@artsybaku?_r=1&_t=ZS-9BE5eZiRRq8”,
+“currency”: “AZN” }, “products”: [ { “id”: “sep-a”, “name”: “SEP A –
+QÜMÜŞÜ”, “price”: 23, “available”: true, “image”:
+“assets/images/products/sep-a.jpg” }, { “id”: “sep-b”, “name”: “SEP B –
+QIZILI”, “price”: 23, “available”: true, “image”:
+“assets/images/products/sep-b.jpg” }, { “id”: “qolbag”, “name”:
+“QOLBAQ”, “price”: 23, “available”: true, “image”:
+“assets/images/products/qolbag.jpg” }, { “id”: “brelok”, “name”: “BRELOK
+/ ASMAQ ÜÇÜN”, “price”: 23, “available”: true, “image”:
+“assets/images/products/brelok.jpg” } ], “flowers”: [ {“id”: “pink”,
+“name”: “Çəhrayı”, “hex”: “#ED45A5”, “available”: true}, {“id”:
+“yellow”, “name”: “Sarı”, “hex”: “#F3DF16”, “available”: true}, {“id”:
+“orange”, “name”: “Narıncı”, “hex”: “#F5A21B”, “available”: true},
+{“id”: “red”, “name”: “Qırmızı”, “hex”: “#E52B35”, “available”: true},
+{“id”: “purple”, “name”: “Bənövşəyi”, “hex”: “#A52BD1”, “available”:
+true}, {“id”: “green”, “name”: “Yaşıl”, “hex”: “#399D39”, “available”:
+true} ] }
+
+Məhsul statusunu dəyişmək: “available”: true — məhsul satışdadır.
+“available”: false — məhsul satışda deyil.
+
+Eyni qayda gül rənglərinə də aiddir.
+
+WhatsApp nömrəsini dəyişmək üçün yalnız business.whatsapp dəyərini
+dəyişmək kifayət etməlidir.
+
+4.  ÇATDIRILMA KONFİQURASİYASI — delivery.json
+
+Çatdırılma məlumatları ayrıca JSON faylında saxlanılsın: - Metro pickup:
+0 AZN. - Taxi courier: sayt hesablamasında 0 AZN. - Azerpoçt/Cargo: 4
+AZN.
+
+Taxi ödənişinin müştəri tərəfindən birbaşa kuryerə edildiyi ayrıca
+göstərilsin. Çatdırılma günləri və saatları da bu fayldan idarə olunsun.
+
+5.  GITHUB PAGES UYĞUNLUĞU
+
+-   Bütün yollar relative path istifadə etsin.
+-   Repository subpath altında işləsin.
+-   JSON faylları düzgün yüklənsin.
+-   Səhifələr arasında keçidlər işləsin.
+-   Server-side routing tələb olunmasın.
+-   JSON yüklənmədikdə istifadəçiyə Azərbaycan dilində xəta göstərilsin.
+-   Sayt lokal HTTP server vasitəsilə sınaqdan keçirilsin.
+
+6.  WHATSAPP İNTEQRASİYASI
+
+Rəsmi click-to-chat formatı:
+https://wa.me/WHATSAPP_NUMBER?text=ENCODED_MESSAGE
+
+Nömrə store.json faylından götürülsün. Mesaj JavaScript
+encodeURIComponent() vasitəsilə kodlaşdırılsın. WhatsApp mesajı
+avtomatik göndərilməsin. Müştəri WhatsApp daxilində “Göndər” düyməsinə
+özü basmalıdır.
+
+7.  TƏHLÜKƏSİZLİK
+
+-   Heç bir parol və gizli API açarı əlavə edilməsin.
+-   Müştəri məlumatları public JSON fayllarında saxlanılmasın.
+-   Şəxsi sifariş məlumatları localStorage-da saxlanılmasın.
+-   Form məlumatları yoxlanılsın.
+-   Təhlükəli HTML injection imkanları yaradılmasın.
+
+8.  SEO VƏ PERFORMANS
+
+-   Hər səhifədə uyğun title və meta description.
+-   Open Graph metadata.
+-   Favicon.
+-   sitemap.xml.
+-   robots.txt.
+-   Şəkillər üçün alt atributları.
+-   WebP formatı üstünlük təşkil etsin.
+-   Lazy loading istifadə edilsin.
+-   Mobil internetdə sürətli açılsın.
+
+9.  TEST SİYAHISI
+
+Layihə tamamlanmazdan əvvəl yoxla: 1. Bütün səhifələr açılır. 2. Dörd
+orijinal məhsul şəkli görünür. 3. Bütün məhsullar 23 AZN göstərilir. 4.
+Altı gül rəngi görünür. 5. Mövcud olmayan rəng seçilə bilmir. 6. Mövcud
+olmayan məhsul sifariş edilə bilmir. 7. Bir sifarişə bir neçə məhsul
+əlavə olunur. 8. Hər məhsul üçün ayrıca rəng seçilir. 9. Say dəyişdikdə
+qiymət yenilənir. 10. Məhsul silindikdə ümumi məbləğ yenilənir. 11.
+Metro çatdırılması pulsuzdur. 12. Taxi haqqı sayta əlavə edilmir. 13.
+Azerpoçt/Karqo üçün 4 AZN əlavə olunur. 14. Çatdırılma saatları
+düzgündür. 15. Müştəri məlumatları yoxlanılır. 16. WhatsApp mesajı
+düzgün yaradılır. 17. WhatsApp nömrəsi düzgündür. 18. Instagram keçidi
+işləyir. 19. TikTok keçidi işləyir. 20. GitHub Pages deployment işləyir.
+21. Mobil və desktop görünüşləri yoxlanılır.
+
+============================================================ PART 3 —
+GOOGLE ANTIGRAVITY ÜÇÜN MASTER DEVELOPMENT PROMPT
+============================================================
+
+Sən təcrübəli frontend proqramçı, UI/UX dizayneri və proqram
+arxitektorusan.
+
+Bu sənəddəki PRD və TRD tələblərinə uyğun Artsy Baku üçün tam işlək,
+peşəkar və GitHub Pages-də yayımlana bilən veb-sayt yarat.
+
+ƏSAS QAYDALAR
+
+1.  Real işləyən veb-sayt yarat, sadəcə dizayn prototipi yox.
+2.  Bütün müştəriyə görünən mətnlər Azərbaycan dilində olsun.
+3.  HTML, CSS, Vanilla JavaScript və JSON istifadə et.
+4.  Backend və database yaratma.
+5.  Klassik shopping cart yaratma.
+6.  Çoxməhsullu sifariş forması yarat.
+7.  Təqdim edilən orijinal məhsul şəkillərindən istifadə et.
+8.  Bütün məhsulların qiyməti 23 AZN olsun.
+9.  Məhsul və gül statuslarını JSON-dan idarə et.
+10. WhatsApp nömrəsini store.json faylından götür.
+11. Instagram və TikTok keçidlərini düzgün yerləşdir.
+12. Çatdırılma məlumatlarını delivery.json faylından götür.
+13. GitHub Pages ilə tam uyğunluq təmin et.
+14. Heç bir biznes məlumatını özündən uydurma.
+15. Yeni məhsullar əlavə etmə.
+16. Saxta düymələr və işləməyən funksiyalar buraxma.
+
+MƏRHƏLƏ 1 — ŞƏKİLLƏRİN TƏHLİLİ
+
+Bütün yüklənmiş şəkilləri diqqətlə yoxla.
+
+Müəyyən et: - Hansı şəkil hansı məhsula aiddir. - Məhsulların
+fərqləri. - Gül rəngləri. - Şəkillərin uyğun fayl adları.
+
+Orijinal şəkilləri qoruyub saxla. Süni məhsul şəkilləri ilə əvəz etmə.
+
+ƏLAVƏ MƏCBURİ TƏLİMAT — GÜL RƏNGLƏRİ ÜÇÜN VİZUAL İSTİNAD
+
+Təqdim etdiyim “Gül Rəng Seçin” şəklini diqqətlə təhlil et.
+
+Bu şəkil məhsullarda istifadə olunan altı real gül rənginin vizual
+istinadıdır.
+
+Rənglərin uyğunluğu: 1. Çəhrayı 2. Sarı 3. Narıncı 4. Qırmızı 5.
+Bənövşəyi 6. Yaşıl
+
+Veb-saytda bu altı rəngi dairəvi seçim elementləri şəklində göstər.
+
+Rəng seçimlərinin görünüşünü təqdim etdiyim şəkilə mümkün qədər uyğun
+hazırla. Rənglərin vizual görünüşünü özbaşına dəyişmə və əlavə rənglər
+yaratma.
+
+Bu şəkli məhsul şəkli kimi deyil, yalnız rənglər üçün vizual istinad
+kimi istifadə et. Şəkildəki nömrələmə və ağ fonlu kartları veb-saytın
+rəng seçimlərinə olduğu kimi köçürmək məcburi deyil; əsas məqsəd altı
+gül rənginin düzgün müəyyən edilməsi və uyğun göstərilməsidir.
+
+Hər məhsul üçün rəng ayrıca seçilməlidir. Mövcud olmayan rənglər seçilə
+bilməməlidir.
+
+MƏRHƏLƏ 2 — DİZAYN
+
+Bütün səhifələri hazırla: - Ana səhifə. - Məhsullar. - Sifariş. -
+Çatdırılma. - Əlaqə.
+
+Dizayn zərif, müasir, premium və əl işi brendinə uyğun olmalıdır.
+Müştəriyə görünən bütün elementlər Azərbaycan dilində yazılmalıdır.
+
+MƏRHƏLƏ 3 — FUNKSİONALLIQ
+
+Aşağıdakı funksiyaları real şəkildə həyata keçir: - JSON-dan məhsulları
+oxumaq. - Məhsul mövcudluğunu idarə etmək. - Gül rənglərinin
+mövcudluğunu idarə etmək. - Məhsul əlavə etmək. - Məhsul silmək. -
+Miqdar dəyişmək. - Rəng seçmək. - Əlavə qeyd yazmaq. - Ümumi məbləği
+hesablamaq. - Çatdırılma haqqını düzgün hesablamaq. - Form
+validasiyası. - WhatsApp sifariş mesajı yaratmaq.
+
+MƏRHƏLƏ 4 — LOGO
+
+Hələlik müvəqqəti mətn əsaslı Artsy Baku loqosu istifadə et.
+
+Real loqo üçün aşağıdakı yolu əvvəlcədən hazırla:
+assets/images/branding/logo.png
+
+Mən sonradan öz hazırladığım loqonu təqdim edəcəyəm. Onu həmin fayla
+yerləşdirəndə bütün səhifələrdə avtomatik istifadə edilməlidir.
+
+MƏRHƏLƏ 5 — GITHUB PAGES
+
+Layihəni GitHub Pages üçün hazırla. - README.md yarat. - Deployment
+təlimatlarını yaz. - JSON dəyişikliklərinin necə ediləcəyini izah et. -
+Relative path-ləri yoxla. - Bütün keçidləri sınaqdan keçir. - Saytın həm
+lokal HTTP serverdə, həm də GitHub Pages repository subpath ünvanında
+işlədiyini yoxla.
+
+MƏRHƏLƏ 6 — SON TESTLƏR
+
+Bütün test siyahısını yoxla.
+
+Xüsusilə: - Sifarişin WhatsApp-a düzgün ötürülməsi. - Məhsul
+qiymətlərinin düzgün hesablanması. - 4 AZN karqo haqqının yalnız uyğun
+çatdırılma üsuluna tətbiqi. - Taxi ödənişinin müştəri tərəfindən kuryerə
+edilməsi. - Məhsul və gül mövcudluğunun JSON-dan idarə olunması. -
+Azərbaycan dilində düzgün görünüş. - Mobil uyğunluq. - Çoxməhsullu
+sifarişdə hər məhsulun öz rənginin və sayının WhatsApp mesajında düzgün
+göstərilməsi. - WhatsApp mesajının müştəri tərəfindən göndərilməli
+olması; sayt mesajı avtomatik göndərməməlidir.
+
+SON TƏHVİL
+
+Tam işlək layihəni təqdim et: - Bütün HTML, CSS və JavaScript
+faylları. - JSON konfiqurasiya faylları. - README.md. - GitHub Pages
+deployment təlimatı. - Məhsul və qiymət dəyişdirmə təlimatı. - Gül rəngi
+statusu dəyişdirmə təlimatı. - WhatsApp nömrəsi dəyişdirmə təlimatı. -
+Çatdırılma məlumatlarının dəyişdirilməsi təlimatı.
+
+Layihə yalnız müştəri bütün sifariş prosesini uğurla tamamlayıb
+WhatsApp-da düzgün hazırlanmış mesajı görə bildikdə hazır hesab olunur.
+
+ƏSAS MƏQSƏD: Artsy Baku üçün real, peşəkar, sürətli, mobil uyğun və
+GitHub Pages üzərində işləyən Azərbaycan dilli veb-sayt yaratmaqdır.
+
+============================================================
+ANTIGRAVITY-YƏ FAYLLARIN TƏQDİM EDİLMƏSİ
+============================================================
+
+Bu TXT sənədi ilə birlikdə aşağıdakı şəkilləri də təqdim edəcəyəm: 1.
+Dörd orijinal məhsul şəkli. 2. Altı gül rəngini göstərən “Gül Rəng
+Seçin” vizual istinad şəkli. 3. Əgər ayrıca təqdim etsəm, digər brend və
+dizayn istinad şəkilləri.
+
+Şəkilləri bu sənəddəki tələblərə uyğun təhlil et və düzgün təyinatla
+istifadə et. Məhsul şəkillərini gül rəngi istinad şəkli ilə qarışdırma.
+Heç bir orijinal şəkli süni yaradılmış və ya stok şəkli ilə əvəz etmə.
+
+İŞƏ BAŞLAMAZDAN ƏVVƏL: - Bütün təqdim edilmiş şəkillərin sayını və
+məzmununu yoxla. - Hər məhsul şəklini uyğun məhsulla əlaqələndir. - Gül
+rəngləri istinad şəklini ayrıca müəyyən et. - Çatışmayan və ya
+qeyri-müəyyən şəkil varsa, təxmin etmə; məndən dəqiqləşdirmə istə. -
+Sonra layihəni mərhələli şəkildə qur, real funksionallığı həyata keçir
+və test et.

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D4AF37" />
+      <stop offset="100%" stop-color="#AA7C11" />
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="#1A1816" stroke="url(#goldGrad)" stroke-width="2"/>
+  <!-- Stylized flower bud in crystal capsule -->
+  <path d="M32 14 C26 14 24 20 24 28 C24 38 32 46 32 46 C32 46 40 38 40 28 C40 20 38 14 32 14 Z" fill="none" stroke="url(#goldGrad)" stroke-width="2"/>
+  <!-- Mini petals -->
+  <circle cx="32" cy="27" r="4.5" fill="#ED45A5"/>
+  <circle cx="30" cy="24" r="3" fill="#F5A21B"/>
+  <circle cx="34" cy="24" r="3" fill="#A52BD1"/>
+  <!-- Stem -->
+  <path d="M32 32 L32 42" stroke="#399D39" stroke-width="1.8" stroke-linecap="round"/>
+</svg>

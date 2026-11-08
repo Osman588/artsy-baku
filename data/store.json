@@ -1,0 +1,61 @@
+{
+  "business": {
+    "name": "Artsy Baku",
+    "tagline": "Fərdi Adlı Canlı Gül Aksesuarları",
+    "description": "Sevginizi və xatirələrinizi zərif şüşə kapsulda canlı saxlayın. Əl işi, fərdi adlı kulonlar, qolbaqlar və aksesuarlar.",
+    "whatsapp": "994516138069",
+    "whatsappDisplay": "+994 51 613 80 69",
+    "instagram": "https://www.instagram.com/artsybaku?rpxt=MWowZDJzYm9rZ29ocg==",
+    "instagramDisplay": "@artsybaku",
+    "tiktok": "https://www.tiktok.com/@artsybaku?_r=1&_t=ZS-9BE5eZiRRq8",
+    "tiktokDisplay": "@artsybaku",
+    "currency": "AZN",
+    "currencySymbol": "₼"
+  },
+  "products": [
+    {
+      "id": "sep-a",
+      "name": "SEP A – QÜMÜŞÜ",
+      "price": 23,
+      "available": true,
+      "badge": "Çox Satılan",
+      "image": "assets/images/products/sep-a.jpg",
+      "description": "Zərif qümüşü rəngli zəncir və metal qapaqlı şüşə kapsul daxilində canlı quru gül kompozisiyası. Kapsul daxilinə istədiyiniz fərdi ad yazılır."
+    },
+    {
+      "id": "sep-b",
+      "name": "SEP B – QIZILI",
+      "price": 23,
+      "available": true,
+      "badge": "Premium",
+      "image": "assets/images/products/sep-b.jpg",
+      "description": "Parlaq qızılı detal və zəncirlə tamamlanan, daxilində təbii gül və fərdi ad olan xüsusi kulon. Hədiyyə üçün ideal seçimdir."
+    },
+    {
+      "id": "qolbag",
+      "name": "QOLBAQ",
+      "price": 23,
+      "available": true,
+      "badge": "Zərif Dizayn",
+      "image": "assets/images/products/qolbag.jpg",
+      "description": "Ölçüsü asanlıqla tənzimlənən toxunma qara kəndir və qızılı sonluqlara malik kapsulda ad və canlı gül olan fərdi qolbaq."
+    },
+    {
+      "id": "brelok",
+      "name": "BRELOK / ASMAQ ÜÇÜN",
+      "price": 23,
+      "available": true,
+      "badge": "Xüsusi Dəst",
+      "image": "assets/images/products/brelok.jpg",
+      "description": "Zərif mirvari ürək, mirvari muncuq asqısı və möhkəm qızılı karabinlə tamamlanmış, daxilində gül və ad olan estetik brelok."
+    }
+  ],
+  "flowers": [
+    { "id": "pink", "name": "Çəhrayı", "number": 1, "hex": "#ED45A5", "available": true },
+    { "id": "yellow", "name": "Sarı", "number": 2, "hex": "#F3DF16", "available": true },
+    { "id": "orange", "name": "Narıncı", "number": 3, "hex": "#F5A21B", "available": true },
+    { "id": "red", "name": "Qırmızı", "number": 4, "hex": "#E52B35", "available": true },
+    { "id": "purple", "name": "Bənövşəyi", "number": 5, "hex": "#A52BD1", "available": true },
+    { "id": "green", "name": "Yaşıl", "number": 6, "hex": "#399D39", "available": true }
+  ]
+}

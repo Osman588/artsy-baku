@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://artsybaku.github.io/sitemap.xml

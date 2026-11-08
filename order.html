@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sifariş — Artsy Baku | Fərdi Canlı Gül Aksesuarları</title>
+  <meta name="description" content="Artsy Baku fərdi adlı və canlı güllü aksesuarların çoxməhsullu sifariş forması. Məhsul və rəng seçin, WhatsApp vasitəsilə dərhal sifariş edin.">
+  <meta property="og:title" content="Sifariş Et — Artsy Baku">
+  <meta property="og:description" content="Klassik səbətsiz, sürətli və çoxməhsullu sifariş forması. WhatsApp ilə birbaşa əlaqə.">
+  <meta property="og:image" content="assets/images/products/sep-a.jpg">
+  
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+  
+  <!-- Stillər -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" aria-label="Artsy Baku Ana Səhifə">
+        <img src="assets/images/branding/logo.png" alt="Artsy Baku" class="brand-logo-img" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+        <span class="brand-logo-fallback">
+          <span class="logo-serif">Artsy</span>
+          <span class="logo-accent">Baku</span>
+        </span>
+      </a>
+
+      <nav class="nav-menu" aria-label="Əsas Menyu">
+        <a href="index.html" class="nav-link">Ana Səhifə</a>
+        <a href="products.html" class="nav-link">Məhsullar</a>
+        <a href="order.html" class="nav-link active">Sifariş Et</a>
+        <a href="delivery.html" class="nav-link">Çatdırılma</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="delivery.html" class="btn btn-secondary btn-sm">Çatdırılma Qaydaları</a>
+        <button class="mobile-nav-toggle" aria-label="Menyunu aç/bağla">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobil Menyu Pərdəsi -->
+  <div class="mobile-menu-overlay"></div>
+  <aside class="mobile-menu-drawer">
+    <div>
+      <a href="index.html" class="brand-logo" style="margin-bottom: 28px;">
+        <span class="brand-logo-fallback">
+          <span class="logo-serif">Artsy</span>
+          <span class="logo-accent">Baku</span>
+        </span>
+      </a>
+      <nav class="mobile-nav-links">
+        <a href="index.html" class="nav-link">Ana Səhifə</a>
+        <a href="products.html" class="nav-link">Məhsullar</a>
+        <a href="order.html" class="nav-link active">Sifariş Et</a>
+        <a href="delivery.html" class="nav-link">Çatdırılma</a>
+      </nav>
+    </div>
+    <div>
+      <a href="#" target="_blank" rel="noopener" data-business="whatsapp-link" class="btn btn-whatsapp btn-block">WhatsApp ilə Əlaqə</a>
+    </div>
+  </aside>
+
+  <!-- ==================== SƏHİFƏ BAŞLIĞI ==================== -->
+  <section class="section-sm bg-secondary" style="border-bottom: 1px solid var(--border-color);">
+    <div class="container text-center">
+      <span class="section-tag">Sürətli Sifariş</span>
+      <h1 class="heading-lg" style="margin-bottom: 8px;">Fərdi Sifariş Forması</h1>
+      <p class="text-lead" style="max-width: 600px; margin: 0 auto;">
+        Məhsulu, canlı gül rəngini və kapsul daxilinə yazılacaq adı seçin. Bir sifarişə istədiyiniz qədər fərqli məhsul əlavə edə bilərsiniz.
+      </p>
+    </div>
+  </section>
+
+  <!-- ==================== ƏSAS SİFARİŞ BÖLMƏSİ ==================== -->
+  <section class="section bg-white">
+    <div class="container">
+      <form id="orderForm" class="order-layout">
+        
+        <!-- Sol tərəf: Məhsullar və Müştəri Forması -->
+        <div class="order-form-panel">
+          
+          <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px;">
+            <h2 class="heading-md">1. Seçilmiş Məhsullar</h2>
+            <span class="badge badge-gold">Bütün məhsullar 23 AZN</span>
+          </div>
+
+          <!-- Dinamik Məhsul Kartları Wrapper -->
+          <div class="order-items-wrapper" id="orderItemsWrapper">
+            <!-- js/order.js tərəfindən idarə olunur -->
+          </div>
+
+          <!-- Başqa Məhsul Əlavə Et Düyməsi -->
+          <button type="button" class="btn-add-product" id="btnAddProduct">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="12" y1="5" x2="12" y2="19"/>
+              <line x1="5" y1="12" x2="19" y2="12"/>
+            </svg>
+            <span>+ Başqa məhsul əlavə et</span>
+          </button>
+
+          <!-- Çatdırılma Bölməsi -->
+          <div style="margin-top: 48px; padding-top: 32px; border-top: 2px solid var(--border-color);">
+            <div style="display: flex; align-items: baseline; justify-content: space-between; margin-bottom: 20px;">
+              <h2 class="heading-md">2. Çatdırılma Üsulu</h2>
+              <a href="delivery.html" target="_blank" style="font-size: 0.85rem; color: var(--gold-hover); text-decoration: underline;">
+                Qaydalar və Saatlar
+              </a>
+            </div>
+
+            <div class="delivery-options-grid">
+              <!-- Metroda təhvil -->
+              <label class="delivery-radio-card">
+                <input type="radio" name="deliveryMethod" value="metro" checked>
+                <div class="delivery-card-inner">
+                  <span class="delivery-radio-circle"></span>
+                  <div class="delivery-card-content">
+                    <div class="delivery-header-line">
+                      <span class="delivery-card-title">Metroda təhvil</span>
+                      <span class="badge badge-green">PULSUZ (0 AZN)</span>
+                    </div>
+                    <div class="delivery-card-desc">
+                      Nərimanov, 28 May və ya Gənclik metrolarının çıxışında təhvil verilir.
+                    </div>
+                  </div>
+                </div>
+              </label>
+
+              <!-- Taxi kuryer -->
+              <label class="delivery-radio-card">
+                <input type="radio" name="deliveryMethod" value="taxi">
+                <div class="delivery-card-inner">
+                  <span class="delivery-radio-circle"></span>
+                  <div class="delivery-card-content">
+                    <div class="delivery-header-line">
+                      <span class="delivery-card-title">Birbaşa ünvana — Taxi kuryer</span>
+                      <span class="badge badge-gold">Kuryerə ödənilir</span>
+                    </div>
+                    <div class="delivery-card-desc">
+                      Bakı daxilində ünvanınıza çatdırılır. Taxi kuryerin ödənişi məhsul qəbul edilərkən birbaşa kuryerə ödənilir (sayt hesabına daxil edilmir).
+                    </div>
+                  </div>
+                </div>
+              </label>
+
+              <!-- Azərpoçt / Karqo -->
+              <label class="delivery-radio-card">
+                <input type="radio" name="deliveryMethod" value="cargo">
+                <div class="delivery-card-inner">
+                  <span class="delivery-radio-circle"></span>
+                  <div class="delivery-card-content">
+                    <div class="delivery-header-line">
+                      <span class="delivery-card-title">Azərpoçt / Karqo</span>
+                      <span class="badge badge-gold">4 AZN</span>
+                    </div>
+                    <div class="delivery-card-desc">
+                      Bakı kəndləri və rayonlara poçt/karqo ilə göndəriş. 4 AZN çatdırılma haqqı yekun məbləğə əlavə edilir.
+                    </div>
+                  </div>
+                </div>
+              </label>
+            </div>
+
+            <!-- Şərti Giriş Sahələri -->
+            <div id="metroLocationGroup" class="conditional-delivery-field">
+              <label class="form-label" for="metroStationSelect">Təhvil almaq istədiyiniz metro stansiyası <span class="req">*</span></label>
+              <select id="metroStationSelect" class="form-control">
+                <option value="Nərimanov metrosu">Nərimanov metrosu</option>
+                <option value="28 May metrosu">28 May metrosu</option>
+                <option value="Gənclik metrosu">Gənclik metrosu</option>
+              </select>
+            </div>
+
+            <div id="taxiAddressGroup" class="conditional-delivery-field" style="display: none;">
+              <label class="form-label" for="taxiAddressInput">Tam çatdırılma ünvanınız <span class="req">*</span></label>
+              <input type="text" id="taxiAddressInput" class="form-control" placeholder="Məsələn: Nəsimi rayonu, Nizami küç. 45, mənzil 12">
+            </div>
+
+            <div id="cargoAddressGroup" class="conditional-delivery-field" style="display: none;">
+              <label class="form-label" for="cargoAddressInput">Rayon və tam poçt ünvanı <span class="req">*</span></label>
+              <input type="text" id="cargoAddressInput" class="form-control" placeholder="Məsələn: Gəncə şəhəri, Heydər Əliyev pr. 10 və ya Poçt indeksi">
+            </div>
+          </div>
+
+          <!-- Müştəri Məlumatları -->
+          <div style="margin-top: 36px; padding-top: 32px; border-top: 2px solid var(--border-color);">
+            <h2 class="heading-md" style="margin-bottom: 20px;">3. Müştəri Məlumatları</h2>
+
+            <div class="form-group">
+              <label class="form-label" for="customerName">Ad və Soyadınız <span class="req">*</span></label>
+              <input type="text" id="customerName" class="form-control" placeholder="Ad və soyadınızı daxil edin" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="customerPhone">Əlaqə Telefon Nömrəniz <span class="req">*</span></label>
+              <input type="tel" id="customerPhone" class="form-control" placeholder="Məsələn: 050 123 45 67" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="preferredTime">Üstünlük verdiyiniz çatdırılma günü və saatı <span class="help-text">(istəyə bağlı)</span></label>
+              <input type="text" id="preferredTime" class="form-control" placeholder="Məsələn: Şənbə günü saat 17:00 radələrində">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="orderNote">Əlavə qeydləriniz və ya xüsusi istəklər <span class="help-text">(istəyə bağlı)</span></label>
+              <textarea id="orderNote" class="form-control" rows="3" placeholder="Sifariş və ya çatdırılma ilə bağlı əlavə qeydiniz varsa yazın..."></textarea>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Sağ tərəf: Yekun Hesablama və Sifariş Düyməsi -->
+        <aside class="order-summary-card">
+          <h3 class="summary-heading">Sifariş Xülasəsi</h3>
+
+          <div class="summary-rows">
+            <div class="summary-row">
+              <span>Məhsul sayı:</span>
+              <strong id="summaryItemsCount">1 ədəd</strong>
+            </div>
+
+            <div class="summary-row">
+              <span>Məhsulların cəmi:</span>
+              <strong id="summaryItemsSubtotal">23 AZN</strong>
+            </div>
+
+            <div class="summary-row">
+              <span>Çatdırılma:</span>
+              <strong id="summaryDeliveryFee">PULSUZ (0 AZN)</strong>
+            </div>
+
+            <div class="summary-row total-row">
+              <span>Yekun Məbləğ:</span>
+              <span class="total-amount" id="summaryGrandTotal">23 AZN</span>
+            </div>
+          </div>
+
+          <div id="summaryTaxiNotice" class="taxi-disclaimer" style="display: none;">
+            ⚠️ <strong>Qeyd:</strong> Taxi kuryer haqqı sifariş məbləğinə daxil edilmir və məhsul təhvil verilərkən birbaşa kuryerə ödənilir.
+          </div>
+
+          <button type="submit" class="btn btn-whatsapp btn-block" style="padding: 15px 20px; font-size: 1.05rem;">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.34C9.36 7.34 9.09 7.4 8.87 7.65C8.65 7.89 8.02 8.48 8.02 9.7C8.02 10.92 8.91 12.09 9.03 12.26C9.16 12.42 10.74 14.99 13.24 15.98C15.32 16.8 15.74 16.64 16.2 16.59C16.65 16.55 17.65 16 17.86 15.42C18.06 14.83 18.06 14.33 18 14.22C17.94 14.12 17.78 14.06 17.53 13.94C17.29 13.82 16.08 13.22 15.86 13.14C15.63 13.06 15.47 13.01 15.3 13.26C15.14 13.5 14.66 14.06 14.52 14.22C14.37 14.38 14.23 14.4 13.98 14.28C13.74 14.16 12.95 13.9 12.01 13.07C11.28 12.42 10.79 11.61 10.65 11.37C10.5 11.12 10.63 10.99 10.76 10.87C10.87 10.76 11.01 10.58 11.13 10.43C11.25 10.29 11.3 10.18 11.38 10.02C11.46 9.85 11.42 9.71 11.36 9.59C11.3 9.47 10.8 8.24 10.59 7.74C10.38 7.26 10.18 7.32 10.02 7.32C9.88 7.32 9.71 7.34 9.53 7.34Z"/>
+            </svg>
+            <span>Sifarişi WhatsApp-a Göndər</span>
+          </button>
+
+          <p style="font-size: 0.78rem; color: var(--text-muted); text-align: center; margin-top: 12px; line-height: 1.4;">
+            Düyməyə basdıqda WhatsApp tətbiqi açılacaq və hazırlanmış sifariş mesajını birbaşa göndərə biləcəksiniz.
+          </p>
+
+          <div class="summary-guarantees">
+            <div class="guarantee-item">
+              <span>🔒</span>
+              <span>Kart və bank məlumatı tələb olunmur</span>
+            </div>
+            <div class="guarantee-item">
+              <span>🌸</span>
+              <span>100% təbii quru gül və fərdi əl işi</span>
+            </div>
+            <div class="guarantee-item">
+              <span>💬</span>
+              <span>Canlı və sürətli WhatsApp təsdiqi</span>
+            </div>
+          </div>
+        </aside>
+
+      </form>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="brand-logo-fallback">
+            <span class="logo-serif">Artsy</span>
+            <span class="logo-accent">Baku</span>
+          </div>
+          <p>Sevgi və xatirələrinizi zərif şüşə kapsulda canlı saxlayın. Əl işi, fərdi adlı kulonlar, qolbaqlar və aksesuarlar.</p>
+          <div class="footer-social-links">
+            <a href="https://www.instagram.com/artsybaku?rpxt=MWowZDJzYm9rZ29ocg==" target="_blank" rel="noopener" data-business="instagram-link" class="social-btn" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@artsybaku?_r=1&_t=ZS-9BE5eZiRRq8" target="_blank" rel="noopener" data-business="tiktok-link" class="social-btn" aria-label="TikTok">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.24 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/></svg>
+            </a>
+            <a href="https://wa.me/994516138069" target="_blank" rel="noopener" data-business="whatsapp-link" class="social-btn" aria-label="WhatsApp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.34C9.36 7.34 9.09 7.4 8.87 7.65C8.65 7.89 8.02 8.48 8.02 9.7C8.02 10.92 8.91 12.09 9.03 12.26C9.16 12.42 10.74 14.99 13.24 15.98C15.32 16.8 15.74 16.64 16.2 16.59C16.65 16.55 17.65 16 17.86 15.42C18.06 14.83 18.06 14.33 18 14.22C17.94 14.12 17.78 14.06 17.53 13.94C17.29 13.82 16.08 13.22 15.86 13.14C15.63 13.06 15.47 13.01 15.3 13.26C15.14 13.5 14.66 14.06 14.52 14.22C14.37 14.38 14.23 14.4 13.98 14.28C13.74 14.16 12.95 13.9 12.01 13.07C11.28 12.42 10.79 11.61 10.65 11.37C10.5 11.12 10.63 10.99 10.76 10.87C10.87 10.76 11.01 10.58 11.13 10.43C11.25 10.29 11.3 10.18 11.38 10.02C11.46 9.85 11.42 9.71 11.36 9.59C11.3 9.47 10.8 8.24 10.59 7.74C10.38 7.26 10.18 7.32 10.02 7.32C9.88 7.32 9.71 7.34 9.53 7.34Z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Naviqasiya</h4>
+          <div class="footer-links">
+            <a href="index.html">Ana Səhifə</a>
+            <a href="products.html">Məhsullar</a>
+            <a href="order.html">Sifariş Forması</a>
+            <a href="delivery.html">Çatdırılma və Qaydalar</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Məhsullar</h4>
+          <div class="footer-links">
+            <a href="order.html?product=sep-a">SEP A – QÜMÜŞÜ</a>
+            <a href="order.html?product=sep-b">SEP B – QIZILI</a>
+            <a href="order.html?product=qolbag">QOLBAQ</a>
+            <a href="order.html?product=brelok">BRELOK / ASMAQ ÜÇÜN</a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="footer-heading">Əlaqə</h4>
+          <div class="footer-links">
+            <p style="font-size: 0.9rem; color: #AAA399;">WhatsApp: <span data-business="whatsapp-number">+994 51 613 80 69</span></p>
+            <p style="font-size: 0.9rem; color: #AAA399;">Instagram: <span data-business="instagram-handle">@artsybaku</span></p>
+            <p style="font-size: 0.9rem; color: #AAA399;">TikTok: <span data-business="tiktok-handle">@artsybaku</span></p>
+            <p style="font-size: 0.9rem; color: #AAA399;">Ünvan: Bakı şəhəri, Azərbaycan</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>© <span class="current-year">2026</span> Artsy Baku. Bütün hüquqlar qorunur.</div>
+        <div>Bakıda sevgi və zərifliklə hazırlanır ✨</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== WHATSAPP ÜZƏN DÜYMƏ ==================== -->
+  <a href="https://wa.me/994516138069" target="_blank" rel="noopener" data-business="whatsapp-link" class="whatsapp-float-btn" aria-label="WhatsApp ilə birbaşa əlaqə">
+    <div class="whatsapp-pulse-ring"></div>
+    <svg viewBox="0 0 24 24"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19.01L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 14.99 3.81 13.47 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.53 7.34C9.36 7.34 9.09 7.4 8.87 7.65C8.65 7.89 8.02 8.48 8.02 9.7C8.02 10.92 8.91 12.09 9.03 12.26C9.16 12.42 10.74 14.99 13.24 15.98C15.32 16.8 15.74 16.64 16.2 16.59C16.65 16.55 17.65 16 17.86 15.42C18.06 14.83 18.06 14.33 18 14.22C17.94 14.12 17.78 14.06 17.53 13.94C17.29 13.82 16.08 13.22 15.86 13.14C15.63 13.06 15.47 13.01 15.3 13.26C15.14 13.5 14.66 14.06 14.52 14.22C14.37 14.38 14.23 14.4 13.98 14.28C13.74 14.16 12.95 13.9 12.01 13.07C11.28 12.42 10.79 11.61 10.65 11.37C10.5 11.12 10.63 10.99 10.76 10.87C10.87 10.76 11.01 10.58 11.13 10.43C11.25 10.29 11.3 10.18 11.38 10.02C11.46 9.85 11.42 9.71 11.36 9.59C11.3 9.47 10.8 8.24 10.59 7.74C10.38 7.26 10.18 7.32 10.02 7.32C9.88 7.32 9.71 7.34 9.53 7.34Z"/></svg>
+  </a>
+
+  <!-- Skriptlər -->
+  <script src="js/config.js"></script>
+  <script src="js/whatsapp.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/order.js"></script>
+</body>
+</html>
