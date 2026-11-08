@@ -6,8 +6,8 @@
 const FALLBACK_STORE = {
   "business": {
     "name": "Artsy Baku",
-    "tagline": "Fərdi Adlı Canlı Gül Aksesuarları",
-    "description": "Sevginizi və xatirələrinizi zərif şüşə kapsulda canlı saxlayın. Əl işi, fərdi adlı kulonlar, qolbaqlar və aksesuarlar.",
+    "tagline": "Düyü Dənəsi Üzərində Fərdi Ad & Canlı Gül Əl İşi Hədiyyələr",
+    "description": "Əl işi fərdi hədiyyələr. Sevginizi və xatirələrinizi zərif şüşə tüb daxilində canlı quru gül və düyü dənəsi üzərinə yazılan fərdi adla əbədiləşdirin.",
     "whatsapp": "994516138069",
     "whatsappDisplay": "+994 51 613 80 69",
     "instagram": "https://www.instagram.com/artsybaku?rpxt=MWowZDJzYm9rZ29ocg==",
@@ -15,7 +15,12 @@ const FALLBACK_STORE = {
     "tiktok": "https://www.tiktok.com/@artsybaku?_r=1&_t=ZS-9BE5eZiRRq8",
     "tiktokDisplay": "@artsybaku",
     "currency": "AZN",
-    "currencySymbol": "₼"
+    "currencySymbol": "₼",
+    "riceGrainRules": {
+      "includedNames": 2,
+      "thirdNameExtraPrice": 1,
+      "note": "Bir şüşə tüb daxilinə 2 ad daxildir (pulsuz). 3-cü ad üçün cəmi +1 AZN əlavə olunur."
+    }
   },
   "products": [
     {
@@ -25,7 +30,7 @@ const FALLBACK_STORE = {
       "available": true,
       "badge": "Çox Satılan",
       "image": "assets/images/products/sep-a.jpg",
-      "description": "Zərif qümüşü rəngli zəncir və metal qapaqlı şüşə kapsul daxilində canlı quru gül kompozisiyası. Kapsul daxilinə istədiyiniz fərdi ad yazılır."
+      "description": "Əl işi fərdi hədiyyə. Zərif qümüşü rəngli zəncir və metal detallı şüşə tüb daxilində canlı quru gül və düyü dənəsi üzərinə xüsusi ustalıqla yazılmış fərdi ad. 1 və ya 2 ad pulsuz daxildir."
     },
     {
       "id": "sep-b",
@@ -34,7 +39,7 @@ const FALLBACK_STORE = {
       "available": true,
       "badge": "Premium",
       "image": "assets/images/products/sep-b.jpg",
-      "description": "Parlaq qızılı detal və zəncirlə tamamlanan, daxilində təbii gül və fərdi ad olan xüsusi kulon. Hədiyyə üçün ideal seçimdir."
+      "description": "Əl işi fərdi hədiyyə. Parlaq qızılı detal və zəncirlə tamamlanan, şüşə tüb daxilində təbii gül və düyü dənəciyi üzərində fərdi adlı eksklüziv kulon. 1 və ya 2 ad pulsuz daxildir."
     },
     {
       "id": "qolbag",
@@ -43,7 +48,7 @@ const FALLBACK_STORE = {
       "available": true,
       "badge": "Zərif Dizayn",
       "image": "assets/images/products/qolbag.jpg",
-      "description": "Ölçüsü asanlıqla tənzimlənən toxunma qara kəndir və qızılı sonluqlara malik kapsulda ad və canlı gül olan fərdi qolbaq."
+      "description": "Əl işi fərdi hədiyyə. Ölçüsü asanlıqla tənzimlənən toxunma qara kəndir və qızılı sonluqlu şüşə tüb daxilində canlı gül və düyü dənəsi üzərinə yazılmış fərdi qolbaq. 1 və ya 2 ad pulsuz daxildir."
     },
     {
       "id": "brelok",
@@ -52,7 +57,7 @@ const FALLBACK_STORE = {
       "available": true,
       "badge": "Xüsusi Dəst",
       "image": "assets/images/products/brelok.jpg",
-      "description": "Zərif mirvari ürək, mirvari muncuq asqısı və möhkəm qızılı karabinlə tamamlanmış, daxilində gül və ad olan estetik brelok."
+      "description": "Əl işi fərdi hədiyyə. Zərif mirvari ürək, mirvari muncuq asqısı və möhkəm qızılı karabinlə tamamlanmış, şüşə tüb daxilində gül və düyü dənəsi üzərində fərdi adlı estetik brelok. 1 və ya 2 ad pulsuz daxildir."
     }
   ],
   "flowers": [
