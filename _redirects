@@ -1,0 +1,11 @@
+# Cloudflare Pages Clean URLs & Shortlink Redirects
+
+# Clean URL Rewrites (no .html needed)
+/products   /products.html   200
+/order      /order.html      200
+/delivery   /delivery.html   200
+
+# Direct Shortlinks for Bio & Marketing
+/whatsapp   https://wa.me/994516138069   302
+/instagram  https://www.instagram.com/artsybaku?rpxt=MWowZDJzYm9rZ29ocg==   302
+/tiktok     https://www.tiktok.com/@artsybaku?_r=1&_t=ZS-9BE5eZiRRq8   302
